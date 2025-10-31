@@ -23,9 +23,34 @@ ShowCodeCopyButtons = true
 ShowWordCount = true
 ShowRssButtonInSectionTermList = true
 
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 0
+keys = ["title", "permalink", "summary", "content"]
+
 [params.homeInfoParams]
 Title = "淅淅沥迷"
 Content = "又一个 WordPress 站点"
+
+[params.comments]
+enabled = true
+
+[params.giscus]
+repo = "7893/b"
+repoID = "R_kgDOQMhOpw"
+category = "General"
+categoryID = ""
+mapping = "pathname"
+strict = "0"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom"
+theme = "preferred_color_scheme"
+lang = "zh-CN"
 
 [[params.socialIcons]]
 name = "rss"

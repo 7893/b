@@ -20,8 +20,18 @@ jobs:
           hugo-version: '0.146.0'
           extended: true
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Build
-        run: hugo --minify
+        run: |
+          hugo --minify
+          npx pagefind --site public
 
       - name: Upload to R2
         env:

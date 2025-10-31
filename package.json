@@ -1,0 +1,24 @@
+{
+  "name": "b",
+  "version": "1.0.0",
+  "description": "Static blog powered by Hugo + Cloudflare Workers + R2",
+  "main": "worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7893/b.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/7893/b/issues"
+  },
+  "homepage": "https://github.com/7893/b#readme",
+  "devDependencies": {
+    "pagefind": "^1.4.0"
+  }
+}
