@@ -4,243 +4,106 @@ date: 2017-01-17T07:35:00
 slug: pgp-tools-with-fastmail
 categories: ["Uncategorized"]
 tags: ["Chrome", "encryption", "FastMail", "Firefox", "GNU", "PGP"]
-
 ---
 
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客
 原文：[https://blog.fastmail.com/2016/12/23/pgp-tools-with-fastmail/](https://blog.fastmail.com/2016/12/23/pgp-tools-with-fastmail/)
 
-
-
-
-
 这是 [2016 FastMail Advent Calendar](https://blog.fastmail.com/2016/12/01/fastmail-advent-2016/) 系列的第 23 篇也是倒数第二篇文章。敬请期待明天的最后一篇更新。
 
-
-
-
-
-
-
-
-
-我们之前的 advent 系列文章里，介绍过 为什么 FastMail 不支持 PGP（ [why FastMail doesn&#8217;t have PGP support](https://blog.fastmail.com/2016/12/10/why-we-dont-offer-pgp/)）,并且我们提到过最佳的使用 PGP 的方式是通过命令行工具或 IMAP 客户端软件。
-
-
-
-
+我们之前的 advent 系列文章里，介绍过 为什么 FastMail 不支持 PGP（ [why FastMail doesn't have PGP support](https://blog.fastmail.com/2016/12/10/why-we-dont-offer-pgp/)）,并且我们提到过最佳的使用 PGP 的方式是通过命令行工具或 IMAP 客户端软件。
 
 正如我们之前承诺的，一个适用于 FastMail 的关于（部分）开源的 PGP 客户端说明现在可以参阅了！我们强烈推荐使用开源加密软件，最好 [reproducible builds](https://reproducible-builds.org/) .
 
-
-
-
-
 不清楚类似 [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) 的加密如何工作的？这里是一个引导你进入使用 PGP 加密你的邮件（[PGP to encrypt email](http://www.bitcoinnotbombs.com/beginners-guide-to-pgp/)）的基础的加密概述（[overview of encryption](http://www.explainthatstuff.com/encryption.html)）。如果你打算认真对待你的隐私问题，我们推荐进一步阅读以理解加密软件的风险，它带来的好处以及它们的可用性。
-
-
-
-
 
 虽然我们在这方面已经做了一些基础的研究工作，但我们不能承诺这一定就适用于你的特定情况。
 
-
-
-
 Browser plugins
 
+## [Mailvelope](https://www.mailvelope.com/)
 
+- 支持平台：Firefox Chrome
 
-[Mailvelope](https://www.mailvelope.com/)
+- [使用说明](https://www.mailvelope.com/help)
 
+## [WebPG](https://webpg.org/)
 
+- 支持平台：Firefox Chrome 雷鸟 SeaMonkey
 
+- 先决条件：需要系统中已经安装 [GnuPG 和 Key Agent](https://webpg.org/docs/webpg-userdocs/#!/guide/prerequisites)
 
-支持平台：Firefox Chrome
-
-
-
-[使用说明](https://www.mailvelope.com/help)
-
-
-
-
-[WebPG](https://webpg.org/)
-
-
-
-
-支持平台：Firefox Chrome 雷鸟 SeaMonkey
-
-
-
-先决条件：需要系统中已经安装 [GnuPG 和 Key Agent](https://webpg.org/docs/webpg-userdocs/#!/guide/prerequisites)
-
-
-
-[使用说明](https://webpg.org/docs/webpg-userdocs/#!/guide/introduction)
-
-
-
+- [使用说明](https://webpg.org/docs/webpg-userdocs/#!/guide/introduction)
 
 Native clients
 
+## MacOS
 
+### [GPGTools](https://gpgtools.org/)
 
-MacOS
+- 支持平台：macOS
 
+- 可以用于系统自带邮件客户端，但是当前不兼容 macOS Sierra(10.12版本),临时方案（[workaround](https://gpgtools.tenderapp.com/kb/gpgmail-faq/gpgmail-no-longer-working-after-macos-update4)）.
 
+- [使用说明](https://gpgtools.tenderapp.com/kb/how-to/first-steps-where-do-i-start-where-do-i-begin)
 
-[GPGTools](https://gpgtools.org/)
-
-
-
-
-支持平台：macOS
-
-
-
-可以用于系统自带邮件客户端，但是当前不兼容 macOS Sierra(10.12版本),临时方案（[workaround](https://gpgtools.tenderapp.com/kb/gpgmail-faq/gpgmail-no-longer-working-after-macos-update4)）.
-
-
-
-[使用说明](https://gpgtools.tenderapp.com/kb/how-to/first-steps-where-do-i-start-where-do-i-begin)
-
-
-
-
-iOS(iPhone/iPad)
-
-
-
+## iOS(iPhone/iPad)
 
 当前没有可用的开源 iOS 软件，但是这些软件可以使用（基于 Open PGP 实现）如果你正在寻找替代方案的话。
 
+### [iPGMail](https://ipgmail.com/)
 
+- [使用说明](https://ipgmail.com/guide/)
 
+### [PGPEverywhere](http://pgpeverywhere.com/)
 
-[iPGMail](https://ipgmail.com/)
+- [使用说明](http://pgpeverywhere.com/help.html)
 
+- 常见问题中说他们正在[考虑开源](http://www.pgpeverywhere.com/faq.html)
 
-
-
-[使用说明](https://ipgmail.com/guide/)
-
-
-
-
-[PGPEverywhere](http://pgpeverywhere.com/)
-
-
-
-
-[使用说明](http://pgpeverywhere.com/help.html)
-
-
-
-常见问题中说他们正在[考虑开源](http://www.pgpeverywhere.com/faq.html)
-
-
-
-
-Windows/Linux
-
-
-
+## Windows/Linux
 
 安装一个带有插件功能的客户端以便启用 PGP 功能
 
+- [雷鸟](http://www.mozilla.org/thunderbird/)（多平台支持）
 
-
-
-
-[雷鸟](http://www.mozilla.org/thunderbird/)（多平台支持）
-
-
-
-[Postbox](https://www.postbox-inc.com/)（Windows，非开源软件）
-
-
-
-
+- [Postbox](https://www.postbox-inc.com/)（Windows，非开源软件）
 
 Plugins:
 
+- [WebPG](https://webpg.org/)
 
+- 需要系统中已经安装 [GnuPG 和 Key Agent](https://webpg.org/docs/webpg-userdocs/#!/guide/prerequisites)
 
+- [使用说明](https://webpg.org/docs/webpg-userdocs/#!/guide/introduction)
 
+- [Enigmail](https://www.enigmail.net/index.php/en/)
 
-[WebPG](https://webpg.org/)
+- 需要已经安装 [GnuPG](https://enigmail.wiki/Installation_of_Enigmail)
 
+- [使用说明](https://www.enigmail.net/index.php/en/documentation/user-manual)
 
+## Android
 
-需要系统中已经安装 [GnuPG 和 Key Agent](https://webpg.org/docs/webpg-userdocs/#!/guide/prerequisites)
+### [openKeychain](https://www.openkeychain.org/)
 
+- 和邮件客户端配合使用比如 K-9
 
+- 他们有[一个兼容的客户端列表](https://www.openkeychain.org/apps/)
 
-[使用说明](https://webpg.org/docs/webpg-userdocs/#!/guide/introduction)
+- [使用说明](https://www.openkeychain.org/howto/#/)
 
-
-
-[Enigmail](https://www.enigmail.net/index.php/en/)
-
-
-
-需要已经安装 [GnuPG](https://enigmail.wiki/Installation_of_Enigmail)
-
-
-
-[使用说明](https://www.enigmail.net/index.php/en/documentation/user-manual)
-
-
-
-
-Android
-
-
-
-[openKeychain](https://www.openkeychain.org/)
-
-
-
-
-和邮件客户端配合使用比如 K-9
-
-
-
-他们有[一个兼容的客户端列表](https://www.openkeychain.org/apps/)
-
-
-
-[使用说明](https://www.openkeychain.org/howto/#/)
-
-
-
-
-Command Line
-
-
-
+## Command Line
 
 我们推荐以命令行方式使用 [GNU Privacy Guard](https://www.gnupg.org/).支持很多平台，[开源代码和可执行文件](https://gnupg.org/download/index.html)。
 
-
-
-
-
 [Chris](https://blog.fastmail.com/2016/12/18/interview-chris/) 是我们的一名测试人员，他在他的工作笔记本上配置了 gpg 用它来安全传输数据到家里的电脑而不用带着私钥去工作。下面是他给出的一系列包括 aliases 在内的配置步骤：
 
-
-
-
-
-生成密钥：gpg --gen-key（会问一些问题）
-导出密钥：gpg --armor --output ~/example.fm.key --export chris@example.fm
+生成密钥：`gpg --gen-key`（会问一些问题）
+导出密钥：`gpg --armor --output ~/example.fm.key --export chris@example.fm`
 这个步骤大致如下：
 
-
-
-
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
 
@@ -272,27 +135,15 @@ rqWyA3a+f4o/kgq/0cOlJHponcxWmbvTXIBwMtR0O91E5pqp4/no9SmSWefLd0yM
 zbOJdA==
 =K7Ec
 -----END PGP PUBLIC KEY BLOCK-----
+```
 
+在另一台机器上，比如你的工作机（其他任何你想发送消息/文件的地方），导入密钥：`gpg --import-key ~/example.fm.key` 然后添加下面的内容到你 ~/.bashrc 文件：
 
-
-
-在另一台机器上，比如你的工作机（其他任何你想发送消息/文件的地方），导入密钥：gpg --import-key ~/example.fm.key 然后添加下面的内容到你 ~/.bashrc 文件：
-
-
-
-
-
-alias ToChris='gpg --encrypt --recipient="chris@example.fm" --armour' alias scramble="gpg --output encrypted.gpg --encrypt --recipient chris@example.fm "
-
-
-
-
+`alias ToChris='gpg --encrypt --recipient="chris@example.fm" --armour' alias scramble="gpg --output encrypted.gpg --encrypt --recipient chris@example.fm "`
 
 由于工作机没有你的密码或私钥，你可以使用如下命令行来创建加密的消息/文件：
 
-
-
-
+```
 echo "This is a private message. Remember to feed Ninja" | ToChris
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v1
@@ -307,54 +158,30 @@ i6f7y2jSB27wUaGr4EY6vZMyjHpoIlSK0eq4h9bvRNJrAQhcLoEzDxD83oECGXTD
 qwvgjYrTzu9JJll9LUDjTR0ow4OLaJdIIdPq7uRoBEyhX23mfZIFAruoc3w=
 =mjJW
 -----END PGP MESSAGE-----
-
-
-
+```
 
 然后你可以发送 GPG 消息其他人便不能阅读了（比如，复制粘贴到 FastMail 网页客户端并且作为邮件正文）
 
-
-
-
-
-如下命令创建可以作为邮件附件的 encrypted.gpg 文件：scramble &lt;filename&gt;
-
-
-
+如下命令创建可以作为邮件附件的 encrypted.gpg 文件：`scramble `
 
 Key parties
 
-
-
-
 有许多关于 准备签名密钥（[prepare for a key signing party](http://www.phillylinux.org/keys/terminal.html)） 的网络资料。部分是有关于学术会议的，你可以和其他人在你的领域建立一个可信的 web .需要注意的是要知道正在操作什么类型（which kind of [key party](https://www.mailvelope.com/)）的密钥。
-
-
-
 
 Example GPG bootstrapping
 
-
-
-
 下面是 Bron 演示的创建密钥完整密钥并且替换过期密钥以及用它来签名文档的完整过程：
 
-
-
-
+```
 brong@wot:~$ gpg --list-keys brong@fastmail.fm
 pub   rsa2048 2015-09-20 &#91;SC] &#91;expired: 2016-09-19]
       0FBAC288980E770A5A789BA1410D67927CA469F8
-uid           &#91; expired] Bron Gondwana &lt;brong@fastmail.fm&gt;
-
-
-
+uid           &#91; expired] Bron Gondwana 
+```
 
 看看自从我上次签名东西已经过了多久了！
 
-
-
-
+```
 brong@wot:~$ gpg --gen-key
 gpg (GnuPG) 2.1.15; Copyright (C) 2016 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
@@ -371,22 +198,18 @@ GnuPG needs to construct a user ID to identify your key.
 Real name: Bron Gondwana
 Email address: brong@fastmail.fm
 You selected this USER-ID:
-    "Bron Gondwana &lt;brong@fastmail.fm&gt;"
+    "Bron Gondwana "
 
 Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
 We need to generate a lot of random bytes. It is a good idea to perform
 some other action (type on the keyboard, move the mouse, utilize the
 disks) during the prime generation; this gives the random number
 generator a better chance to gain enough entropy.
-
-
-
+```
 
 这个时候弹出了一个对话框让我选择一个密码。
 
-
-
-
+```
 We need to generate a lot of random bytes. It is a good idea to perform
 some other action (type on the keyboard, move the mouse, utilize the
 disks) during the prime generation; this gives the random number
@@ -398,19 +221,15 @@ public and secret key created and signed.
 
 pub   rsa2048 2016-12-22 &#91;SC]
       8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993
-uid                      Bron Gondwana &lt;brong@fastmail.fm&gt;
+uid                      Bron Gondwana 
 sub   rsa2048 2016-12-22 &#91;E]
 
 brong@wot:~$`
-
-
-
+```
 
 现在我有了一个新密钥。让我们来上传到公钥服务器（keyservers）吧：
 
-
-
-
+```
 brong@wot:~$ gpg --send-keys 8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993
 gpg: sending key D92B20BCF922A993 to hkp://keys.gnupg.net
 brong@wot:~$
@@ -431,14 +250,8 @@ EAYtogDd+jCL1FB0iyu01oUUoTRqgayMUWChJeofVZ9sehqyhXNoYNp4+/+jusmG
 nblWeEYZ2S9d5jBNcHgd5cWQDwlBCJKnx1O8Qj9VO+hkBJBB7wHMAIyei8VsIbM=
 =QT0N
 -----END PGP SIGNATURE-----
-
-
-
+```
 
 现在你可以说我些的这个没有任何一个我的同事可以编辑而且是绝对私密的了（And you can tell that I wrote this and none of my colleagues can edit that text and put words in my mouth）（除非他们用我的电子邮件创建了不同的密钥伪造了这篇文章中关于创建密钥的部分！！！）
-
-
-
-
 
 命令行方式是最安全的使用 PGP 的方法，这种方式下你的电子邮件客户端和加密软件是完全分开独立运行的，只有密文或签名后的密文被传输到了你要从你的安全计算机外发的邮件中。
