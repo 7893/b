@@ -4,27 +4,57 @@ Static blog powered by Hugo + Cloudflare Workers + R2
 
 ## Tech Stack
 
-- **Static Generator**: Hugo with PaperMod theme
+- **Static Generator**: Hugo v0.146.0 with PaperMod theme
 - **Storage**: Cloudflare R2 (bucket: blog-b)
 - **CDN**: Cloudflare Workers
 - **URL**: https://b.53.workers.dev
+- **CI/CD**: GitHub Actions
 
 ## Content
 
-21 articles migrated from WordPress (6ki.org)
+21 articles migrated from WordPress (6ki.org) with:
+- Categories and tags preserved
+- Original publish dates maintained
+- SEO optimized metadata
 
-## Build
+## Features
+
+- ✅ Responsive design
+- ✅ Dark/Light theme
+- ✅ RSS feed
+- ✅ Sitemap (SEO)
+- ✅ robots.txt
+- ✅ Automatic deployment via GitHub Actions
+- ✅ Categories and tags taxonomy
+
+## Local Development
 
 ```bash
+# Build
 hugo --minify
+
+# Preview (requires Hugo)
+hugo server
 ```
 
-## Deploy
+## Deployment
 
+Automatic deployment on push to `main` branch via GitHub Actions:
+1. Build Hugo site
+2. Upload to R2
+3. Deploy Worker
+
+Manual deployment:
 ```bash
 # Upload to R2
-aws s3 sync public/ s3://blog-b/ --endpoint-url $R2_ENDPOINT
+aws s3 sync public/ s3://blog-b/ --endpoint-url $R2_ENDPOINT --delete
 
 # Deploy Worker
 wrangler deploy
 ```
+
+## SEO
+
+- Sitemap: https://b.53.workers.dev/sitemap.xml
+- RSS: https://b.53.workers.dev/index.xml
+- robots.txt: https://b.53.workers.dev/robots.txt
