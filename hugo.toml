@@ -1,0 +1,26 @@
+baseURL = 'https://b.53.workers.dev/'
+languageCode = 'zh-cn'
+title = '淅淅沥迷'
+theme = 'PaperMod'
+
+[params]
+description = '又一个 WordPress 站点'
+author = '淅淅沥迷'
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+
+[params.homeInfoParams]
+Title = "淅淅沥迷"
+Content = "又一个 WordPress 站点"
+
+[[params.socialIcons]]
+name = "rss"
+url = "/index.xml"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
