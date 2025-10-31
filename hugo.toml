@@ -4,6 +4,7 @@ title = '淅淅沥迷'
 theme = 'PaperMod'
 enableRobotsTXT = true
 enableGitInfo = false
+hasCJKLanguage = true
 
 [sitemap]
 changefreq = 'weekly'
@@ -19,7 +20,7 @@ ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
-ShowWordCount = false
+ShowWordCount = true
 ShowRssButtonInSectionTermList = true
 
 [params.homeInfoParams]
