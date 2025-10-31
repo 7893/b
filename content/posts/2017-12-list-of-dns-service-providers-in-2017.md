@@ -12,6 +12,8 @@ tags: ["AFSDB", "Amazon", "Anycast", "AWS", "AXRF", "CAA", "CloudDNS", "Cloudfla
 3. 转载不需要获得授权但需要链接到本文；
 ```
 
+---
+
 ## [DNSPod 中国版](https://cloud.tencent.com/product/cns)
 
 **方案：**免费版，个人专业版，企业基础版，企业标准版，企业旗舰版
@@ -28,7 +30,7 @@ tags: ["AFSDB", "Amazon", "Anycast", "AWS", "AXRF", "CAA", "CloudDNS", "Cloudfla
 
 国际版网站给出了一个[成功案例](https://www.dnspod.com/Customers)，里面有[星巴克中国](https://www.starbucks.com.cn/)，星巴克中国作为腾讯的战略合作伙伴选择的不是国内版 DNSPod 而是国际版，囧，这当然不是考虑到备案和域名实名制问题（星巴克中国在上海）。当前（2017年12月27日）DNSPod 国际版首页顶部出现提示文字：
 
-DNSPod 国际版解析业务暂停维护，不影响您继续使用。如操作过程中给您带来不便，敬请谅解！国内用户请访问 www.dnspod.cn 。
+> DNSPod 国际版解析业务暂停维护，不影响您继续使用。如操作过程中给您带来不便，敬请谅解！国内用户请访问 www.dnspod.cn 。
 
 ## [Cloudflare DNS](https://www.cloudflare.com/dns/)
 
@@ -38,7 +40,7 @@ DNSPod 国际版解析业务暂停维护，不影响您继续使用。如操作�
 
 **特点：**低延迟，超低延迟而且全域名提供 DNSSEC 支持，但是免费版只有两组解析服务器，收费版最便宜的价格是20美元，但是提供四组服务器，提供 DDOS 保护服务，流量统计，SSL加密，加速，缓存，流量控制等等众多强大功能，支持 Anycast 技术，支持 IPv6，但是只支持顶级域名。当前（2017年12月27日）他家的 CAA 记录正在测试？我没有申请参加测试但是我新添加的域名里面已经可以添加 CAA 记录了，但是 CAA 添加的界面这几天经常变化；而且，他家的 CAA 记录，会额外添加几个 CA，比如你只授权了：
 
-issue: letsencrypt.org flags:0
+> issue: letsencrypt.org flags:0
 
 那么额外的几个将是：
 
@@ -65,7 +67,7 @@ issuewild: globalsign.com flags:0
 
 **特点：**提供 A，AAAA，CNAME，MX，TXT，NS，SRV 和 CAA 记录解析而且界面美观生效速度快？
 
-This provider uses CloudFlare Virtual DNS to proxy-cache DNS request through CloudFlare
+> This provider uses CloudFlare Virtual DNS to proxy-cache DNS request through CloudFlare
 
 可见，基本可以理解为 DO 的 DNS 是 Cloudflare 的一个代理或者是一个前端。暂时没有发现有什么官方说明的限制。
 
@@ -93,7 +95,7 @@ DigitalOcean DNS 算不上专业的 DNS，官网的介绍页面也很少，但�
 如同 DigitalOcean 一样，
 *This provider uses CloudFlare Virtual DNS to proxy-cache DNS request through CloudFlare*。但是不同的在于 Linode DNS 只有你在使用它家的 VPS 的时候（至少有一台 VPS 在计费）才可以使用，否则不能使用，如果你没有开通 VPS，则会被告知：
 
-Your zones will not be served by Linode's nameservers unless you have at least one active Linode on your account.
+> Your zones will not be served by Linode's nameservers unless you have at least one active Linode on your account.
 
 **特点：**五组服务器，支持常规记录以外还支持 CAA 记录，也支持当作 Slave DNS /从属 DNS 使用。
 
@@ -151,7 +153,7 @@ DNS 领域的全球老大哥 DNS Made Easy 团队设计开发的 DNS 产品，�
 
 **提示：**
 
-This provider uses CloudFlare Virtual DNS to proxy-cache DNS request through CloudFlare*
+> This provider uses CloudFlare Virtual DNS to proxy-cache DNS request through CloudFlare*
 
 ## [DNS Made Easy](http://www.dnsmadeeasy.com/)
 

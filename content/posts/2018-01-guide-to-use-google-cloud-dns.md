@@ -152,8 +152,8 @@ gcloud dns record-sets import ./staff-mail.zone --zone-file-format -z "staff-mai
 然后你会看到大致如下：
 
 ```
-Imported record-sets from &#91;./staff-mail.zone] into managed-zone &#91;staff-mail].
-Created &#91;https://www.googleapis.com/dns/v1/projects/project-demo-20180104/managedZones/staff-mail/changes/1].
+Imported record-sets from [./staff-mail.zone] into managed-zone [staff-mail].
+Created [https://www.googleapis.com/dns/v1/projects/project-demo-20180104/managedZones/staff-mail/changes/1].
 ID  START_TIME                STATUS
 1   2018-01-03T17:49:26.367Z  pending
 ```

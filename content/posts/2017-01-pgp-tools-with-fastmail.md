@@ -11,6 +11,8 @@ tags: ["Chrome", "encryption", "FastMail", "Firefox", "GNU", "PGP"]
 
 这是 [2016 FastMail Advent Calendar](https://blog.fastmail.com/2016/12/01/fastmail-advent-2016/) 系列的第 23 篇也是倒数第二篇文章。敬请期待明天的最后一篇更新。
 
+---
+
 我们之前的 advent 系列文章里，介绍过 为什么 FastMail 不支持 PGP（ [why FastMail doesn't have PGP support](https://blog.fastmail.com/2016/12/10/why-we-dont-offer-pgp/)）,并且我们提到过最佳的使用 PGP 的方式是通过命令行工具或 IMAP 客户端软件。
 
 正如我们之前承诺的，一个适用于 FastMail 的关于（部分）开源的 PGP 客户端说明现在可以参阅了！我们强烈推荐使用开源加密软件，最好 [reproducible builds](https://reproducible-builds.org/) .
@@ -174,9 +176,9 @@ Example GPG bootstrapping
 
 ```
 brong@wot:~$ gpg --list-keys brong@fastmail.fm
-pub   rsa2048 2015-09-20 &#91;SC] &#91;expired: 2016-09-19]
+pub   rsa2048 2015-09-20 [SC] [expired: 2016-09-19]
       0FBAC288980E770A5A789BA1410D67927CA469F8
-uid           &#91; expired] Bron Gondwana 
+uid           [ expired] Bron Gondwana 
 ```
 
 看看自从我上次签名东西已经过了多久了！
@@ -219,10 +221,10 @@ gpg: directory '/home/brong/.gnupg/openpgp-revocs.d' created
 gpg: revocation certificate stored as '/home/brong/.gnupg/openpgp-revocs.d/8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993.rev'
 public and secret key created and signed.
 
-pub   rsa2048 2016-12-22 &#91;SC]
+pub   rsa2048 2016-12-22 [SC]
       8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993
 uid                      Bron Gondwana 
-sub   rsa2048 2016-12-22 &#91;E]
+sub   rsa2048 2016-12-22 [E]
 
 brong@wot:~$`
 ```

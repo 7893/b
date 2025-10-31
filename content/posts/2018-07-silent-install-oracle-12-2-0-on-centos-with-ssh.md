@@ -8,6 +8,8 @@ tags: ["CentOS", "database", "dba", "Oracle", "SLES"]
 
 ## 概要
 
+---
+
 Oracle 数据库的默认安装非常繁琐复杂，但是大致的套路无非就是找一个能满足业务需求的硬件环境和一个能满足需求（并最大限度提升性能）的系统环境（操作系统环境，网络环境等等）把安装程序扔上去然后让它跑起来就可以了。抛开硬件环境不说，这里只说 Linux 软件环境。
 
 对于常规的三大派系的 Linux 发行版：RedHat SUSE Debian 而言。Oracle 默认是不支持 debian 的，所以这个系列的发行版不推荐安装 Oracle 数据库，即便你再喜欢把 Ubuntu 玩的再 6 也不要试图去把 Oracle 安装再 Ubuntu 上（除非哪天 Oracle 官方支持了），也有一些特别执着的人可能实现了安装，但是生产环境绝不推荐这种做FF法。省下的两大商业发行版 RedHat 和 SUSE 都是支持的。
@@ -16,20 +18,21 @@ Oracle 数据库的默认安装非常繁琐复杂，但是大致的套路无非�
 
 具体操作起来，有两种解决方案：
 
-1.使用 CentOS 安装：本文覆盖范围
-
-2.由于 Oracle Linux 和 CentOS 的关系，所以可以直接把 CentOS 转成 Oracle Linux 来获取官方支持的 preinstall 安装相关的支持套件来简化安装程序，这也是官方推荐的做法。
+> 1.使用 CentOS 安装：本文覆盖范围
+> 2.由于 Oracle Linux 和 CentOS 的关系，所以可以直接把 CentOS 转成 Oracle Linux 来获取官方支持的 preinstall 安装相关的支持套件来简化安装程序，这也是官方推荐的做法。
 
 第二种方法可以参考如下内容：
 
 ```
-https:&#47;&#47;linux.oracle.com/switch/centos/
+https://linux.oracle.com/switch/centos/
 https://gist.github.com/martndemus/7ad8209f9be9185bcf3a
 ```
 
 对于安装，Oracle 默认采用图形化安装方式，但是大多数服务器，尤其是虚拟机没有图形环境，网上有一些采用 Xmanager 的方式，但是不推荐。图形环境安装无非就是设置了一些变量给了 Oracle 系统，那么这些设置肯定是可通过文本进行配置编辑的。所以本文采用静默方式安装。
 
 ## 安装环境
+
+---
 
 本次安装使用当前最佳免费方案，使用当前的最新版 CentOS 7.5 系统。由于 Oracle 18c 的改进较大，所以使用最广泛的次新版 12c 进行安装。
 
@@ -43,6 +46,8 @@ Oracle Database 12c Release 2 (12.2.0.1.0)
 ```
 
 ## 相关术语及其工具说明
+
+---
 
 Oracle Universal Installer(OUI) 是一个安装 Oracle 相关软件的工具，它可以自动启动 ODCA 来安装数据库；
 
@@ -64,51 +69,53 @@ Grid Infrastructure（GI）是给数据库系统提供包括卷管理，文件�
 
 ## 版本区别
 
+---
+
 企业版 Oracle Database Enterprise Edition：
 
-全功能的企业级数据库，专为核心业务和高安全性的在线事务处理而生，并且支持数据仓库相关功能；
+> 全功能的企业级数据库，专为核心业务和高安全性的在线事务处理而生，并且支持数据仓库相关功能；
 
 标准单一版 Oracle Database Standard Edition One：
 
-小型业务使用的单台服务器环境使用，包含了所有构建关键业务所需要的核心功能；
+> 小型业务使用的单台服务器环境使用，包含了所有构建关键业务所需要的核心功能；
 
 标准版 Oracle Database Standard Edition：
 
-适合工作组或部门级别的应用，适合中小型企业。提供和关系型数据库的核心功能并且集成了一些管理工具。
+> 适合工作组或部门级别的应用，适合中小型企业。提供和关系型数据库的核心功能并且集成了一些管理工具。
 
 个人版 Personal Edition (只能用于 Microsoft Windows 系统)：
 
-这个版本和企业版相同，但是只支持单用户。
+> 这个版本和企业版相同，但是只支持单用户。
 
 学习版 Oracle Database Express Edition：
 
-免费使用的入门级的用于快速下载快速安装部署和管理的数据库系统。俗称 Oracle XE 版本，它也可以容易地升级到 Oracle 的其他版本。它可以容易地安装再任何数量 CPU 的机器上，但是它只会使用一个 CPU，而且限制最大数据容量是 4GB 容量，最多使用 1GB 内存。技术支持方面仅支持在线论坛。
+> 免费使用的入门级的用于快速下载快速安装部署和管理的数据库系统。俗称 Oracle XE 版本，它也可以容易地升级到 Oracle 的其他版本。它可以容易地安装再任何数量 CPU 的机器上，但是它只会使用一个 CPU，而且限制最大数据容量是 4GB 容量，最多使用 1GB 内存。技术支持方面仅支持在线论坛。
 
 *当前（2018年7月）XE 的最新版本是 Oracle Database XE 11g Release 2(11.2)，比其他高级版本滞后两个版本。*
 
 更多细节：
 
-https://docs.oracle.com/cd/B28359_01/license.111/b28287/editions.htm
+> 
+> https://docs.oracle.com/cd/B28359_01/license.111/b28287/editions.htm
+> 
 
 ## 安装所需
 
+---
+
 硬件环境所需：
 
-最小内存：1GB
-
-推荐内存：2GB
-
-如需安装 Oracle Grid Infrastructure(GI) 那么最小内存 8GB
+> 最小内存：1GB
+> 推荐内存：2GB
+> 如需安装 Oracle Grid Infrastructure(GI) 那么最小内存 8GB
 
 软件环境所需：
 
 Oracle 可以安装在常规的 Linux 发行版上，但是只支持两大商业主流发行版和派生版（红帽 Linux 和 SUSE Linux）官方不支持 Debian 及其衍生版（Ubuntu 等等），虽然网上有 Ubuntu 和 Debian 上安装 Oracle 数据库的方法，但是不推荐生产环境这样做。对于操作系统内核要求如下：
 
-RHEL7/CentOS7: 最低 3.10.0-123.el7.x86_64
-
-SLES 12 SP1: 最低 3.12.49-11.1
-
-Oracle Database(http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
+> RHEL7/CentOS7: 最低 3.10.0-123.el7.x86_64
+> SLES 12 SP1: 最低 3.12.49-11.1
+> Oracle Database(http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 
 其他说明：
 
@@ -119,6 +126,8 @@ Oracle Database(http://www.oracle.com/technetwork/database/enterprise-edition/do
 ```
 
 ## 环境准备
+
+---
 
 更新系统：
 
@@ -152,13 +161,10 @@ timedatectl set-ntp true
 
 关闭 Transparent HugePages 特性:
 
-详细 Redhat 文档1：https://access.redhat.com/solutions/46111（需要登陆红帽账户）
-
-详细 Redhat 文档2：https://access.redhat.com/solutions/1320153（需要登陆红帽账户）
-
-详细 Redhat 文档3：https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/performance_tuning_guide/sect-red_hat_enterprise_linux-performance_tuning_guide-configuring_transparent_huge_pages
-
-详细 Mongodb 对于不同操作系统而言关闭方法文档：https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/index.html
+> 详细 Redhat 文档1：https://access.redhat.com/solutions/46111（需要登陆红帽账户）
+> 详细 Redhat 文档2：https://access.redhat.com/solutions/1320153（需要登陆红帽账户）
+> 详细 Redhat 文档3：https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/performance_tuning_guide/sect-red_hat_enterprise_linux-performance_tuning_guide-configuring_transparent_huge_pages
+> 详细 Mongodb 对于不同操作系统而言关闭方法文档：https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/index.html
 
 ```
 mkdir /etc/tuned/no-thp
@@ -168,7 +174,7 @@ vim /etc/tuned/no-thp/tuned.conf
 输入以下内容：
 
 ```
-&#91;main]
+[main]
 include=virtual-guest
 ```
 
@@ -194,24 +200,19 @@ cat /sys/kernel/mm/transparent_hugepage/defrag
 如果两句都输出
 
 ```
-always madvise &#91;never]
+always madvise [never]
 ```
 
 说明成功。
 
 交换空间：
 
-Oracle 安装所需的交换空间大小依据物理内存而定：
-
-内存 256MB：内存3倍
-
-内存 256MB 到 512MB 之间：内存2倍
-
-内存 512MB 到 2GB 之间：内存1.5倍
-
-内存 2GB 到 16GB：内存1倍（等于内存容量）
-
-内存大于 16GB：16GB
+> Oracle 安装所需的交换空间大小依据物理内存而定：
+> 内存 256MB：内存3倍
+> 内存 256MB 到 512MB 之间：内存2倍
+> 内存 512MB 到 2GB 之间：内存1.5倍
+> 内存 2GB 到 16GB：内存1倍（等于内存容量）
+> 内存大于 16GB：16GB
 
 如果你的 Linux Server 启用了 HugePages 没有关闭的话，那么你应该在计算交换分区的时候从可用内存里减去给 HugePages 分配的容量再计算。
 
@@ -220,7 +221,7 @@ Oracle 安装所需的交换空间大小依据物理内存而定：
 添加交换空间：
 
 ```
-https:&#47;&#47;6ki.org/2018/07/add-swap-to-linux.html
+https://6ki.org/2018/07/add-swap-to-linux.html
 ```
 
 为了性能提升，还需要（可选）做如下系统修改：
@@ -269,6 +270,8 @@ systemctl restart sshd
 
 ## 用户和组
 
+---
+
 创建用户和组：
 
 ```
@@ -298,6 +301,8 @@ passwd grid
 ```
 
 ## 系统内核优化
+
+---
 
 有则打开无则创建 /etc/sysctl.d/97-oracle-database-sysctl.conf 并加入以下内容： （不推荐网上写的直接修改 /etc/sysctl.conf 文件的做法）
 
@@ -332,6 +337,8 @@ oracle hard nofile 65536
 
 ## 准备相关目录
 
+---
+
 创建 Oracle 安装目录：（不建议更改安装目录，这种目录符合 Oracle 的推荐标注，并且这种形式有个名字叫做 Optimal Flexible Architecture (OFA) Path）
 
 ```
@@ -350,7 +357,7 @@ mkdir -p /u01/app/12.2.0/grid
 # filename:linuxx64_12201_database.zip
 # fllesize:3293.7MB(3.2GB)
 
-wget http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip?AuthParam=&#91;all-full-url-with-your-own-login]
+wget http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip?AuthParam=[all-full-url-with-your-own-login]
 
 unzip linuxx64_12201_database.zip -d /u01/app/stage/
 ```
@@ -369,6 +376,8 @@ chown -R root:root /u01/app/12.2.0/grid
 ```
 
 ## 设置环境变量
+
+---
 
 ```
 # 注意环境变量目录后面不能有“/”
@@ -391,6 +400,8 @@ export PATH=.:$ORACLE_HOME/bin:$ORACLE_HOME/OPatch:$ORACLE_HOME/jdk/bin:$PATH
 ```
 
 ## 配置安装
+
+---
 
 创建安装配置文件
 
@@ -417,14 +428,16 @@ oracle.install.db.OSRACDBA_GROUP=racdba
 oracle.install.db.config.starterdb.type=GENERAL_PURPOSE
 #oracle.install.db.config.starterdb.SID=orcl
 oracle.install.db.config.starterdb.characterSet=ZHS16GBK
-oracle.install.db.config.starterdb.password.ALL=&#91;YourPassword]
-oracle.install.db.config.starterdb.password.DBSNMP=&#91;YourUserName]
+oracle.install.db.config.starterdb.password.ALL=[YourPassword]
+oracle.install.db.config.starterdb.password.DBSNMP=[YourUserName]
 oracle.install.db.config.starterdb.managementOption=CLOUD_CONTROL
-oracle.install.db.config.starterdb.emAdminUser=&#91;YourUserName]
-oracle.install.db.config.starterdb.emAdminPassword=&#91;YourPassword]
+oracle.install.db.config.starterdb.emAdminUser=[YourUserName]
+oracle.install.db.config.starterdb.emAdminPassword=[YourPassword]
 ```
 
 ## 过程安装
+
+---
 
 ```
 cd /u01/app/stage/database
@@ -438,7 +451,7 @@ Starting Oracle Universal Installer...
 
 Checking Temp space: must be greater than 500 MB.   Actual 38822 MBPassed
 Checking swap space: must be greater than 150 MB.   Actual 1999 MBPassed
-Preparing to launch Oracle Universal Installer from /tmp/OraInstall2018-07-12_04-42-48PM. Please wait ...&#91;oracle@instance8 database]$ You can find the log of this install session at:
+Preparing to launch Oracle Universal Installer from /tmp/OraInstall2018-07-12_04-42-48PM. Please wait ...[oracle@instance8 database]$ You can find the log of this install session at:
  /u01/app/oraInventory/logs/installActions2018-07-12_04-42-48PM.log
 The installation of Oracle Database 12c was successful.
 Please check '/u01/app/oraInventory/logs/silentInstall2018-07-12_04-42-48PM.log' for more details.
@@ -482,6 +495,8 @@ Check /u01/app/oracle/product/12.2.0/dbhome_1/install/root_instance8_2018-07-12_
 
 ## 配置静默监听
 
+---
+
 ```
 su - oracle
 # 如果下面这句执行不了则需要认真检查环境变量
@@ -509,6 +524,8 @@ Oracle Net Services configuration successful. The exit code is 0
 
 ## 配置静默建库
 
+---
+
 ```
 vim /u01/app/oracle/etc/dbca.rsp
 ```
@@ -518,9 +535,9 @@ vim /u01/app/oracle/etc/dbca.rsp
 ```
 gdbName=db1
 sid=db1sid
-sysPassword=&#91;YourPassword]
-systemPassword=&#91;YourPassword]
-dbsnmpPassword=&#91;YourPassword]
+sysPassword=[YourPassword]
+systemPassword=[YourPassword]
+dbsnmpPassword=[YourPassword]
 CHARACTERSET=ZHS16GBK
 # 注意 Oracle 推荐的密码长度为 8位并且包含数字大小写字母各 1为，如果密码太弱下一步会提示警告
 ```
@@ -534,14 +551,14 @@ dbca -silent -createDatabase -templateName General_Purpose.dbc -responseFile /u0
 输出如下：
 
 ```
-&#91;WARNING] &#91;DBT-06208] The 'SYS' password entered does not conform to the Oracle recommended standards.
+[WARNING] [DBT-06208] The 'SYS' password entered does not conform to the Oracle recommended standards.
    CAUSE: 
-a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit &#91;0-9].
+a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
 b.The password entered is a keyword that Oracle does not recommend to be used as password
    ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
-&#91;WARNING] &#91;DBT-06208] The 'SYSTEM' password entered does not conform to the Oracle recommended standards.
+[WARNING] [DBT-06208] The 'SYSTEM' password entered does not conform to the Oracle recommended standards.
    CAUSE: 
-a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit &#91;0-9].
+a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
 b.The password entered is a keyword that Oracle does not recommend to be used as password
    ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
 Copying database files
@@ -570,6 +587,8 @@ Look at the log file "/u01/app/oracle/cfgtoollogs/dbca/db1/db1.log" for further 
 ```
 
 ## 查看实例
+
+---
 
 ```
 su -
@@ -625,6 +644,8 @@ oracle   13599     1  0 18:28 ?        00:00:00 ora_w002_db1sid
 
 ## 查看监听状态
 
+---
+
 ```
 su - oracle
 lsnrctl status
@@ -663,6 +684,8 @@ The command completed successfully
 ```
 
 ## 登陆查看实例
+
+---
 
 ```
 sqlplus / as sysdba
@@ -777,5 +800,7 @@ NLSRTL Version 12.2.0.1.0 - Production
 
 SQL>
 ```
+
+---
 
 安装完毕。

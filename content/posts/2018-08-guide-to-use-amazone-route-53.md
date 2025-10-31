@@ -8,6 +8,8 @@ tags: ["Amazon", "Anycast", "AWS", "CAA", "DKIM", "DMARC", "DNS", "DNSSEC", "dom
 
 Amazon Route 53 是什么？
 
+---
+
 "[Amazon Route 53](https://aws.amazon.com/cn/route53/)" 看名字就知道是 亚马逊 Amazon 提供的一项服务，它属于 [Amazon AWS(Amazon Web Services)](https://aws.amazon.com/cn/) 众多服务中的一个，它是一个高可用的弹性 DNS 服务，这项服务主要包括三大功能：
 
 - 域名注册
@@ -160,7 +162,7 @@ Routing Policy（路由策略）：
 
 三流的邮箱服务商还没上 SPF 的时候二流的服务商还在拿 SFP DKIM 和 DMARC 为骄傲的时候一流的服务商现在已经**不推荐设置 SPF 记录**了，[文档](https://docs.aws.amazon.com/zh_cn/Route53/latest/DeveloperGuide/ResourceRecordTypes.html#SPFFormat)表达的理由是：
 
-RFC 7208 中的 *Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1 (在电子邮件中授权使用域的发件人策略框架 (SPF)，版本 1)* 已更新为：“…[I]ts existence and mechanism defined in [RFC4408] have led to some interoperability issues. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it.“(…在 [RFC4408] 中定义的其存在和机制已导致一些互操作性问题。因此，它已不再适合 SPF 版本 1；实施方案中不应再使用它。) 在 RFC 7208 中，请参阅第 14.1 节 [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)。
+> RFC 7208 中的 *Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1 (在电子邮件中授权使用域的发件人策略框架 (SPF)，版本 1)* 已更新为：“…[I]ts existence and mechanism defined in [RFC4408] have led to some interoperability issues. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it.“(…在 [RFC4408] 中定义的其存在和机制已导致一些互操作性问题。因此，它已不再适合 SPF 版本 1；实施方案中不应再使用它。) 在 RFC 7208 中，请参阅第 14.1 节 [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)。
 
 一般情况下创建了一条 DNS 记录以后这条记录大概 60秒 内传播到所有 Route 53 服务器。
 
@@ -191,3 +193,5 @@ DNS response code 状态可以参考【[这个文档](https://www.iana.org/assig
 查看日志：如同上面一样点击域名前面的小圆点右侧弹出面板里面点击前面写的日志组名称就可以查看了。会跳转到 CloudWatch 页面的“日志”标签。
 
 处理日志：选中日志组名称，上面菜单按钮“操作”里面选择。
+
+---

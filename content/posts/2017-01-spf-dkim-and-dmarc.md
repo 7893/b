@@ -6,9 +6,13 @@ categories: ["Uncategorized"]
 tags: ["ARC", "authentication", "DKIM", "DMARC", "DNS", "domain", "Exchange", "FastMail", "IMAP", "POP3", "SMTP", "spam", "SPF", "SRS", ""]
 ---
 
+---
+
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客
 原文：[https://blog.fastmail.com/2016/12/24/spf-dkim-dmarc/](https://blog.fastmail.com/2016/12/24/spf-dkim-dmarc/)
 这是第二十四篇也是 [2016 FastMail Advent Calendar](https://blog.fastmail.com/2016/12/01/fastmail-advent-2016/) 系列的最后一篇文章。谢谢大家阅读也一如既往地感谢大家使用 [FastMail](https://www.fastmail.com/?STKI=16759801) ！
+
+---
 
 看看这封邮件是从谁发给谁的呢？
 
@@ -147,7 +151,7 @@ Ongoing problems
 From: No Reply  To:
 foobar@fastmail.com Subject: Urgent! Your account is going to be closed!
 
-Click &#91;here](http://example.com) right now or your account will be closed
+Click [here](http://example.com) right now or your account will be closed
 ```
 
 很多用户就点开了链接，在一个伪造的页面上输入了登陆信息（甚至包括那些看起来都不是 FastMail 的页面的页面），我们每天都能遇到各种各样的账号被盗。不幸的是，试图教用户（[educate users](http://www.ranum.com/security/computer_security/editorials/dumb/) ）貌似并不奏效。

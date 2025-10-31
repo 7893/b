@@ -46,12 +46,8 @@ Estimate: Mid November
 
 官方博客介绍 https://blog.cloudflare.com/using-cloudflare-registrar/
 
-🎉
-
-You're in Wave 7
-
-🎉
-
-Estimate: Mid November
-
-Thank you! You're now signed up for early access to Cloudflare Registrar. We'll let you know when it's time to transfer your domains to Cloudflare Registrar.
+> 🎉
+> You're in Wave 7
+> 🎉
+> Estimate: Mid November
+> Thank you! You're now signed up for early access to Cloudflare Registrar. We'll let you know when it's time to transfer your domains to Cloudflare Registrar.

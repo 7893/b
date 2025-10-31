@@ -6,9 +6,13 @@ categories: ["Uncategorized"]
 tags: ["Exchange", "FastMail", "IMAP", "JMAP", "polling", "push", "TCP", "token"]
 ---
 
+---
+
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客
 原文：[https://blog.fastmail.com/2016/12/21/what-we-talk-about-when-we-talk-about-push/](https://blog.fastmail.com/2016/12/21/what-we-talk-about-when-we-talk-about-push/)
 这是 [2016 FastMail Advent Calendar](https://blog.fastmail.com/2016/12/01/fastmail-advent-2016/) 系列的第 21 篇文章。敬请期待明天的更新。
+
+---
 
 当一些人考虑注册成为我们的用户时经常会问我们：“你们的产品支持推送吗？”。简单地回答是“支持”，但令人疑惑的当他们问这个问题的时候他们到底是什么意思？这点让这个问题变得有点复杂了。
 当说起电子邮件的时候，大多数人通常理解的“推送”是新的邮件到达一台移动设备的时候他们获得几乎实时（ near-realtime ）的通知。这看起来是一个相当简单的概念，但实现起来却需要电子邮件服务器（比如 FastMail ）和客户端/软件（ iOS 邮件客户端，FastMail 移动客户端或者是 Thunderbird（雷鸟）之类的桌面客户端）之间的精心协作，而且依赖于所使用的机制，设备所使用的操作系统（比如 iOS 或 安卓）和操作系统的供应商（苹果，谷歌）。没有这些环节的配合，实时通知是不能实现的。
@@ -70,7 +74,7 @@ Exchange ActiveSync
 
 Calendars and contacts
 
-十月（2016年10月）我们也同样加入了对 iOS 和 macOS 上联系人和日历的推送（[push for calendars and contacts on iOS and macOS](https://blog.fastmail.com/2016/10/10/push-sync-for-contacts-calendars-now-available-on-ios/)）的支持。在推送方面，它们工作的和 IMAP 一样好 &#8212; 应用程序请求日历和通讯录同通知的请求并产生一个令牌。服务器使用这个令牌通知传递消息的推送服务。操作系统唤醒应用程序然后它返回到服务器去请求更新的内容。对比 CalDAV/CardDAV 和 IMAP，它们有一些结构方面的差异，但是大多数情况下它使用和其他相同的代码和数据模型。
+十月（2016年10月）我们也同样加入了对 iOS 和 macOS 上联系人和日历的推送（[push for calendars and contacts on iOS and macOS](https://blog.fastmail.com/2016/10/10/push-sync-for-contacts-calendars-now-available-on-ios/)）的支持。在推送方面，它们工作的和 IMAP 一样好 — 应用程序请求日历和通讯录同通知的请求并产生一个令牌。服务器使用这个令牌通知传递消息的推送服务。操作系统唤醒应用程序然后它返回到服务器去请求更新的内容。对比 CalDAV/CardDAV 和 IMAP，它们有一些结构方面的差异，但是大多数情况下它使用和其他相同的代码和数据模型。
 
 The future
 
