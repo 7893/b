@@ -28,7 +28,7 @@ jobs:
 
     - name: Build site
       run: |
-        hugo --minify --verbose
+        hugo --minify --logLevel info
         echo "Build completed successfully"
 
     - name: Upload Artifacts
