@@ -1,35 +1,118 @@
-/* 优化代码块样式 */
-pre, code {
-    font-size: 0.875rem !important;
-    line-height: 1.5 !important;
+/* 统一字号系统 */
+:root {
+    --base-font-size: 16px;
+    --code-font-size: 14px;
+    --small-font-size: 14px;
 }
 
-/* 移动端优化 */
-@media (max-width: 768px) {
-    pre, code {
-        font-size: 0.8rem !important;
-    }
-    
-    pre {
-        padding: 0.75rem !important;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+/* 基础正文 */
+body {
+    font-size: var(--base-font-size);
+    line-height: 1.7;
 }
 
-/* 行内代码 */
+.post-content {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.post-content p {
+    margin-bottom: 1.2em;
+}
+
+/* 标题字号 */
+.post-content h1 { font-size: 1.875rem; }
+.post-content h2 { font-size: 1.5rem; }
+.post-content h3 { font-size: 1.25rem; }
+.post-content h4 { font-size: 1.125rem; }
+
+/* 代码块 - 统一为 14px */
+pre {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    padding: 1rem !important;
+    overflow-x: auto;
+    border-radius: 6px;
+}
+
+pre code {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+/* 行内代码 - 与正文相近 */
 code:not(pre code) {
+    font-size: 0.9em !important;
     padding: 0.2em 0.4em;
-    font-size: 0.85em !important;
     background-color: var(--code-bg);
     border-radius: 3px;
 }
 
-/* 代码块 */
-pre code {
-    display: block;
-    padding: 0;
-    background: transparent;
+/* 列表 */
+.post-content ul,
+.post-content ol {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* 元信息 */
+.post-meta {
+    font-size: 14px;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    :root {
+        --base-font-size: 15px;
+        --code-font-size: 13px;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    .post-content {
+        font-size: 15px;
+    }
+    
+    /* 代码块在移动端稍小 */
+    pre {
+        font-size: 13px !important;
+        padding: 0.75rem !important;
+    }
+    
+    pre code {
+        font-size: 13px !important;
+    }
+    
+    /* 标题在移动端适当缩小 */
+    .post-content h1 { font-size: 1.625rem; }
+    .post-content h2 { font-size: 1.375rem; }
+    .post-content h3 { font-size: 1.125rem; }
+}
+
+/* 小屏幕手机 */
+@media (max-width: 480px) {
+    :root {
+        --base-font-size: 14px;
+        --code-font-size: 12px;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .post-content {
+        font-size: 14px;
+    }
+    
+    pre {
+        font-size: 12px !important;
+    }
+    
+    pre code {
+        font-size: 12px !important;
+    }
 }
 
 /* 优化代码块滚动条 */
@@ -44,4 +127,16 @@ pre::-webkit-scrollbar-thumb {
 
 pre::-webkit-scrollbar-track {
     background: var(--code-block-bg);
+}
+
+/* 确保代码块不会太宽 */
+pre {
+    max-width: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* 但保持代码的原始格式 */
+pre code {
+    white-space: pre;
 }
