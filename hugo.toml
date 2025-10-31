@@ -19,7 +19,7 @@ ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
-ShowWordCount = true
+ShowWordCount = false
 ShowRssButtonInSectionTermList = true
 
 [params.homeInfoParams]
