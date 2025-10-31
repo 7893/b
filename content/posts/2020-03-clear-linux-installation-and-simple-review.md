@@ -2,8 +2,9 @@
 title: "英特尔 Clear Linux 安装和简单使用体验"
 date: 2020-03-05T02:54:00
 slug: clear-linux-installation-and-simple-review
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["AWS", "Azure", "ClearLinux", "DigitalOcean", "GoogleCloudPlatform", "Linux"]
+
 ---
 
 介绍

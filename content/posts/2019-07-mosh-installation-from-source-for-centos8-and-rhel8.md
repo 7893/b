@@ -2,8 +2,9 @@
 title: "RHEL8/CentOS8 编译安装 Mosh"
 date: 2019-07-11T01:59:00
 slug: mosh-installation-from-source-for-centos8-and-rhel8
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["CentOS8", "mosh", "RHEL8"]
+
 ---
 
 本来，对于 RHEL/CentOS 系统 mosh 应该在第三方源 EPEL 里面，可是当前（2019年7月）的时间节点正是 RHEL8 发布后，CentOS8 和 EPEL8 还没有发布。所以给 RHEL8 安装 mosh 则不能使用 EPEL 源了。

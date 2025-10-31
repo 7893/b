@@ -2,8 +2,9 @@
 title: "PGP tools with FastMail"
 date: 2017-01-17T07:35:00
 slug: pgp-tools-with-fastmail
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["Chrome", "encryption", "FastMail", "Firefox", "GNU", "PGP"]
+
 ---
 
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客

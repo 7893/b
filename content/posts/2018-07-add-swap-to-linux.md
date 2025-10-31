@@ -2,8 +2,9 @@
 title: "给 Linux 系统添加 swap 交换空间"
 date: 2018-07-26T09:20:00
 slug: add-swap-to-linux
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["CentOS", "DigitalOcean", "Linode"]
+
 ---
 
 对于虚拟机而言，一般服务商给 虚拟机（VM（Virtual Machine））不会分配交换空间，有较少数的服务商在图形界面面板里可以配置交换空间（例如 Linode）。这样的话通过把已有硬盘划分一块给一个单独的文件并把这个文件格式化成交换分区的格式然后挂载给系统然后永久启用就可以了，具体如下：

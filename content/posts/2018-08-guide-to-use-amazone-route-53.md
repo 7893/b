@@ -2,8 +2,9 @@
 title: "Amazon Route 53 使用指南"
 date: 2018-08-08T08:08:00
 slug: guide-to-use-amazone-route-53
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["Amazon", "Anycast", "AWS", "CAA", "DKIM", "DMARC", "DNS", "DNSSEC", "domain", "GEO", "ns1", "Route53", "SPF"]
+
 ---
 
 Amazon Route 53 是什么？

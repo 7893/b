@@ -2,8 +2,9 @@
 title: "域名邮箱"
 date: 2018-09-01T19:20:00
 slug: domain-email-hosting
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["Amazon", "AWS", "domain", "Google", "GSuite", "hosting", "IMAP", "POP3"]
+
 ---
 
 当前（2018年9月），市场上的域名邮箱无非就那么几个了：

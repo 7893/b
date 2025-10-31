@@ -2,8 +2,9 @@
 title: "Cloudflare 推出域名注册服务 Cloudflare Registrar 并且开放早期申请支持免费 DNSSEC"
 date: 2018-09-28T08:08:00
 slug: early-access-to-cloudflare-registrar
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["CDN", "Cloudflare", "dash", "DNS", "DNSSEC", "domain", "Registrar"]
+
 ---
 
 是谁？

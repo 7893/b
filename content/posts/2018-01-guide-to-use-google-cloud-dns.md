@@ -2,8 +2,9 @@
 title: "Guide to use Google Cloud DNS"
 date: 2018-01-03T22:49:00
 slug: guide-to-use-google-cloud-dns
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["Anycast", "CAA", "CloudDNS", "DKIM", "DMARC", "DNS", "DNSSEC", "gCloud", "Google", "GoogleCloudPlatform", "GoogleDomains", "SOA", "SPF"]
+
 ---
 
 介绍

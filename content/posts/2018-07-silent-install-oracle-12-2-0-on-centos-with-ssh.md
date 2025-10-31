@@ -2,8 +2,9 @@
 title: "CentOS 7.5 无图静默安装 Oracle 12.2.0"
 date: 2018-07-16T17:37:00
 slug: silent-install-oracle-12-2-0-on-centos-with-ssh
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["CentOS", "database", "dba", "Oracle", "SLES"]
+
 ---
 
 概要

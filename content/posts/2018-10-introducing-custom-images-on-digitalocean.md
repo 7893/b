@@ -2,8 +2,9 @@
 title: "新功能介绍：DigitalOcean 自定义镜像"
 date: 2018-10-06T09:19:00
 slug: introducing-custom-images-on-digitalocean
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["DigitalOcean", "VirtualBox"]
+
 ---
 
 前段时间 [DigitalOcean](https://m.do.co/c/7210ed2e262d) 页面左侧【Images】菜单中出现了一个子菜单【Custom Images】但是点进去页面错误直接就是 DO 的鲨鱼了。今早，DO 发邮件说他们的这个功能上线了。

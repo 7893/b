@@ -2,10 +2,18 @@ baseURL = 'https://b.53.workers.dev/'
 languageCode = 'zh-cn'
 title = '淅淅沥迷'
 theme = 'PaperMod'
+enableRobotsTXT = true
+enableGitInfo = false
+
+[sitemap]
+changefreq = 'weekly'
+filename = 'sitemap.xml'
+priority = 0.5
 
 [params]
 description = '又一个 WordPress 站点'
 author = '淅淅沥迷'
+keywords = ['博客', 'Linux', 'DNS', '技术']
 ShowReadingTime = true
 ShowShareButtons = false
 ShowPostNavLinks = true
@@ -24,3 +32,7 @@ url = "/index.xml"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'

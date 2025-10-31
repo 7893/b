@@ -2,8 +2,9 @@
 title: "Debian 无法修改 /etc/hosts 文件"
 date: 2019-09-07T09:19:00
 slug: modify-your-hosts-file-on-debian-linux
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["AWS", "cloud", "Debian", "hostname", "hosts", "Lightsail"]
+
 ---
 
 本文描述的情况使用的操作系统如下所示，可能不适用于正在阅读本文的时候已经更新的版本或不同的主机商的不同配置：

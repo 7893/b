@@ -2,8 +2,9 @@
 title: "What we talk about when we talk about push"
 date: 2017-01-14T06:39:00
 slug: what-we-talk-about-when-we-talk-about-push
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["Exchange", "FastMail", "IMAP", "JMAP", "polling", "push", "TCP", "token"]
+
 ---
 
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客

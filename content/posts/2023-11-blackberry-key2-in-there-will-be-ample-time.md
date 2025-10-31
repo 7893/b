@@ -2,8 +2,9 @@
 title: "董家希使用的黑莓Key2手机"
 date: 2023-11-10T21:39:00
 slug: blackberry-key2-in-there-will-be-ample-time
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["BlackBerry", "smartphone"]
+
 ---
 
 董家希使用的黑莓Key2智能手机

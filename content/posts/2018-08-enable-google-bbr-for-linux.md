@@ -2,8 +2,9 @@
 title: "启用 Google BBR 拥塞控制算法"
 date: 2018-08-08T08:08:00
 slug: enable-google-bbr-for-linux
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["algorithm", "Google", "Linux", "network"]
+
 ---
 
 查看内核版本

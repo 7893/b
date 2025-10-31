@@ -2,8 +2,9 @@
 title: "安装 MongoDB 遇到的坑"
 date: 2019-03-05T09:20:00
 slug: mongodb-installations-errors-on-linux
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["Mongo", "MongoDB"]
+
 ---
 
 概要：这篇文章说的是在 Linux 上（包括 Ubuntu 和 CentOS）上安装 MongoDB 社区版（Community Edition）遇到的几个坑。

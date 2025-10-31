@@ -2,8 +2,9 @@
 title: "SPF, DKIM &amp; DMARC email anti-spoofing technology history and future"
 date: 2017-01-11T13:37:00
 slug: spf-dkim-and-dmarc
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["ARC", "authentication", "DKIM", "DMARC", "DNS", "domain", "Exchange", "FastMail", "IMAP", "POP3", "SMTP", "spam", "SPF", "SRS"]
+
 ---
 
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客

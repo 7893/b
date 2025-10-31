@@ -2,8 +2,9 @@
 title: "How TOTP (authenticator apps) work"
 date: 2017-01-18T02:09:00
 slug: how-totp-authenticator-apps-work
-categories: []
-tags: []
+categories: ["Uncategorized"]
+tags: ["authentication", "encryption", "FastMail", "FIDO", "TOTP", "U2F"]
+
 ---
 
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客
