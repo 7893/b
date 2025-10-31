@@ -100,7 +100,7 @@ Clear Linux 是英特尔发布的一个滚动更新的，针对英特尔架构�
 
 看一把 os-release
 
-```
+```bash
 clear@s-1vcpu-1gb-sfo2-01~ $ cat /etc/os-release 
 NAME="Clear Linux OS"
 VERSION=1
@@ -117,7 +117,7 @@ PRIVACY_POLICY_URL="http://www.intel.com/privacy"
 
 看一把 free
 
-```
+```bash
 clear@s-1vcpu-1gb-sfo2-01~ $ free -h
               total        used        free      shared  buff/cache   available
 Mem:          983Mi        50Mi       857Mi       0.0Ki        76Mi       825Mi
@@ -126,7 +126,7 @@ Swap:            0B          0B          0B
 
 看一把硬盘
 
-```
+```bash
 clear@s-1vcpu-1gb-sfo2-01~ $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root        25G  424M   24G   2% /
@@ -144,38 +144,36 @@ Clear Linux 使用 swupd 来进行包管理和更新操作，可以理解为之�
 
 官方 man 手册：
 
-```
+```bash
 man swupd
 ```
 
 官方 GitHub 在线手册网页版：
 
-```
-[GitHub][17]
-```
+[GitHub](https://github.com/clearlinux/swupd-client/blob/master/docs/swupd.1.rst)
 
 查看自动更新是否打开：
 
-```
+```bash
 sudo swupd autoupdate
 ```
 
 自动更新默认是关闭的，打开/关闭自动更新：
 
-```
+```bash
 sudo swupd autoupdate --enable
 sudo swupd autoupdate --disable
 ```
 
 检查系统更新：
 
-```
+```bash
 sudo swupd check-update
 ```
 
 更新系统：（更新或者安装会重启正在运行的项）
 
-```
+```bash
 sudo swupd update
 ```
 
@@ -183,7 +181,7 @@ sudo swupd update
 
 搜索软件包：
 
-```
+```bash
 clear@s-1vcpu-1gb-sfo2-01~ $ sudo swupd search mosh
 Component mosh has version 1.3.2
 
@@ -197,7 +195,7 @@ swupd bundle-add  sysadmin-basic
 
 安装搜索到的软件包：（更新或者安装会重启正在运行的项）
 
-```
+```bash
 sudo swupd bundle-add  sysadmin-basic #正确
 sudo swupd bundle-add  mosh #错误
 ```
@@ -206,7 +204,7 @@ sudo swupd bundle-add  mosh #错误
 
 删除软件包：(删除软件包不会删除依赖)
 
-```
+```bash
 sudo swupd bundle-remove axel
 ```
 
