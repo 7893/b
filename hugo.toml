@@ -17,6 +17,21 @@ hasCJKLanguage = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.goldmark.parser]
+    [markup.goldmark.parser.attribute]
+      block = true
+  [markup.asciidocExt]
+    backend = 'html5'
+    extensions = []
+    failureLevel = 'fatal'
+    noHeaderOrFooter = true
+    preserveTOC = false
+    safeMode = 'unsafe'
+    sectionNumbers = false
+    trace = false
+    verbose = false
+    workingFolderCurrent = false
+    [markup.asciidocExt.attributes]
 
 [sitemap]
 changefreq = 'weekly'
@@ -49,7 +64,7 @@ Title = "淅淅沥迷"
 Content = "又一个 WordPress 站点"
 
 [params.comments]
-enabled = true
+enabled = false
 
 [params.giscus]
 repo = "7893/b"
@@ -74,3 +89,13 @@ home = ["HTML", "RSS", "JSON"]
 [taxonomies]
 category = 'categories'
 tag = 'tags'
+
+[markup.goldmark.extensions]
+typographer = true
+
+[markup.goldmark.extensions.passthrough]
+enable = false
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = []
+inline = []
