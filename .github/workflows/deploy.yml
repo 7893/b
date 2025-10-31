@@ -52,7 +52,7 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v4
 
-  deploy-cloudflare-pages:
+  deploy-cloudflare-worker:
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
@@ -69,12 +69,31 @@ jobs:
     - name: Install Wrangler
       run: npm install -g wrangler
 
-    - name: Deploy to Cloudflare Pages
-      uses: cloudflare/pages-action@v1
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        projectName: 'b'
-        directory: './public'
+    - name: Deploy to R2 Bucket
+      run: |
+        # Configure Wrangler
+        echo "CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}" >> .env
+        echo "CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}" >> .env
+        
+        # Deploy static files to R2 bucket
+        wrangler r2 object put blog-b/index.html --file public/index.html --content-type=text/html || true
+        find public -type f | while read file; do
+          rel_path="${file#public/}"
+          if [[ "$rel_path" == *.html ]]; then
+            content_type="text/html"
+          elif [[ "$rel_path" == *.css ]]; then
+            content_type="text/css"
+          elif [[ "$rel_path" == *.js ]]; then
+            content_type="application/javascript"
+          elif [[ "$rel_path" == *.png ]]; then
+            content_type="image/png"
+          elif [[ "$rel_path" == *.jpg ]] || [[ "$rel_path" == *.jpeg ]]; then
+            content_type="image/jpeg"
+          else
+            content_type="application/octet-stream"
+          fi
+          wrangler r2 object put "blog-b/$rel_path" --file "$file" --content-type="$content_type" || true
+        done
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
