@@ -49,6 +49,7 @@ ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 ShowWordCount = true
 ShowRssButtonInSectionTermList = true
+env = "development"  # 避免调用google_analytics.html
 
 [params.fuseOpts]
 isCaseSensitive = false
