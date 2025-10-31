@@ -64,7 +64,7 @@ Title = "淅淅沥迷"
 Content = "又一个 WordPress 站点"
 
 [params.comments]
-enabled = false
+enabled = true
 
 [params.giscus]
 repo = "7893/b"
