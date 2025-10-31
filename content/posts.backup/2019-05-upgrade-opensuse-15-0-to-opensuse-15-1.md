@@ -1,8 +1,8 @@
 ---
 title: "openSUSE 15.0 升级 openSUSE 15.1"
-date: 2019-05-24T10:27:00
+date: 2019-05-24T18:27:00
 slug: upgrade-opensuse-15-0-to-opensuse-15-1
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["openSUSE", "upgrade"]
 ---
 

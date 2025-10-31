@@ -1,8 +1,8 @@
 ---
 title: "RHEL8/CentOS8 编译安装 Mosh"
-date: 2019-07-10T17:59:00
+date: 2019-07-11T01:59:00
 slug: mosh-installation-from-source-for-centos8-and-rhel8
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["CentOS8", "mosh", "RHEL8"]
 ---
 

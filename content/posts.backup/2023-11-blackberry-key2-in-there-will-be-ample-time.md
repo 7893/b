@@ -1,12 +1,10 @@
 ---
 title: "董家希使用的黑莓Key2手机"
-date: 2023-11-10T13:39:00
+date: 2023-11-10T21:39:00
 slug: blackberry-key2-in-there-will-be-ample-time
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["BlackBerry", "smartphone"]
 ---
-
-董家希使用的黑莓Key2智能手机
 
 由[任素汐](https://baike.baidu.com/item/%E4%BB%BB%E7%B4%A0%E6%B1%90/5452519?fromModule=lemma_inlink)、[李雪琴](https://baike.baidu.com/item/%E6%9D%8E%E9%9B%AA%E7%90%B4/23246744?fromModule=lemma_inlink)主演的电视剧《**故乡，别来无恙**》中最近（2023年11月）在腾讯视频热播，剧中第三集追逐戏圈的**董家希**刚入职加群的手机特写吸引了一票观众的眼球，董家希到底使用的是啥牌子的啥手机呢？先说结论：
 

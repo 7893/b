@@ -1,9 +1,9 @@
 ---
 title: "SPF, DKIM & DMARC email anti-spoofing technology history and future"
-date: 2017-01-11T05:37:00
+date: 2017-01-11T13:37:00
 slug: spf-dkim-and-dmarc
-categories: ["uncategorized"]
-tags: ["ARC", "authentication", "DKIM", "DMARC", "DNS", "domain", "Exchange", "FastMail", "IMAP", "POP3", "SMTP", "spam", "SPF", "SRS", "Yubikey"]
+categories: ["Uncategorized"]
+tags: ["ARC", "authentication", "DKIM", "DMARC", "DNS", "domain", "Exchange", "FastMail", "IMAP", "POP3", "SMTP", "spam", "SPF", "SRS"]
 ---
 
 ---
@@ -62,7 +62,7 @@ Subject: Receipt for your donation to Wikimedia Foundation, Inc.
 
 DMARC
 
-[DMARC (Domain-based Message Authentication, Reporting & Conformance)](https://en.wikipedia.org/wiki/DMARC) 试图解决 SPF 和 DKIM 二者遗留的可信问提。仍然，通过 DNS 记录，域所有者可以定义邮件接收者接受到邮件后的行为。就 DMARC 来说，我们通过查看发件人字段认为邮件来自一个特定的域：--当你收到邮件的时候看到的地址。
+[DMARC (Domain-based Message Authentication, Reporting & Conformance)](https://en.wikipedia.org/wiki/DMARC) 试图解决 SPF 和 DKIM 二者遗留的可信问提。仍然，通过 DNS 记录，域所有者可以定义邮件接收者接受到邮件后的行为。就 DMARC 来说，我们通过查看发件人字段认为邮件来自一个特定的域：–当你收到邮件的时候看到的地址。
 基本上，在你设置一个 DMARC 记录后邮件接收者应该：
 
 - 检查发件人字段的域是否匹配 DKIM 签名的域（这个过程叫做 校验（[alignment](https://en.wikipedia.org/wiki/DMARC#Alignment)））以及 DKIM 签名是否有效；
@@ -151,7 +151,7 @@ Ongoing problems
 From: No Reply  To:
 foobar@fastmail.com Subject: Urgent! Your account is going to be closed!
 
-Click &#91;here](http://example.com) right now or your account will be closed
+Click [here](http://example.com) right now or your account will be closed
 ```
 
 很多用户就点开了链接，在一个伪造的页面上输入了登陆信息（甚至包括那些看起来都不是 FastMail 的页面的页面），我们每天都能遇到各种各样的账号被盗。不幸的是，试图教用户（[educate users](http://www.ranum.com/security/computer_security/editorials/dumb/) ）貌似并不奏效。

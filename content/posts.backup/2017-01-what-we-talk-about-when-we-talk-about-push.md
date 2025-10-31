@@ -1,8 +1,8 @@
 ---
 title: "What we talk about when we talk about push"
-date: 2017-01-13T22:39:00
+date: 2017-01-14T06:39:00
 slug: what-we-talk-about-when-we-talk-about-push
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["Exchange", "FastMail", "IMAP", "JMAP", "polling", "push", "TCP", "token"]
 ---
 
@@ -74,7 +74,7 @@ Exchange ActiveSync
 
 Calendars and contacts
 
-十月（2016年10月）我们也同样加入了对 iOS 和 macOS 上联系人和日历的推送（[push for calendars and contacts on iOS and macOS](https://blog.fastmail.com/2016/10/10/push-sync-for-contacts-calendars-now-available-on-ios/)）的支持。在推送方面，它们工作的和 IMAP 一样好 --- 应用程序请求日历和通讯录同通知的请求并产生一个令牌。服务器使用这个令牌通知传递消息的推送服务。操作系统唤醒应用程序然后它返回到服务器去请求更新的内容。对比 CalDAV/CardDAV 和 IMAP，它们有一些结构方面的差异，但是大多数情况下它使用和其他相同的代码和数据模型。
+十月（2016年10月）我们也同样加入了对 iOS 和 macOS 上联系人和日历的推送（[push for calendars and contacts on iOS and macOS](https://blog.fastmail.com/2016/10/10/push-sync-for-contacts-calendars-now-available-on-ios/)）的支持。在推送方面，它们工作的和 IMAP 一样好 — 应用程序请求日历和通讯录同通知的请求并产生一个令牌。服务器使用这个令牌通知传递消息的推送服务。操作系统唤醒应用程序然后它返回到服务器去请求更新的内容。对比 CalDAV/CardDAV 和 IMAP，它们有一些结构方面的差异，但是大多数情况下它使用和其他相同的代码和数据模型。
 
 The future
 
@@ -83,7 +83,7 @@ The future
 
 - [JMAP](https://jmap.io/) 定义了[一个推送协议](http://jmap.io/spec-core.html#push)，使用 [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) 或者和移动运营商差不多的推送。JMAP 推送的工作方式是在登陆的时候，客户端给服务端发送一个推送的 URL，而不像其他那种特定的推送令牌（"push token".）。当服务器上有改变的时候服务器只是简单地发送“服务器有改动”这样地消息（符合 JMAP 的数据格式）给那个URL。消息从推送服务到客户端的细节不在JMAP的范围之内，但在理论上它意味着用户可以选择使用推送服务（可能甚至是自己的）。
 
-- 我们曾经考虑过（但是目前没有实施的计划）一个可以做同样的事情的 IMAP 扩展 --允许客户端发送一个 URL 来发送变更。
+- 我们曾经考虑过（但是目前没有实施的计划）一个可以做同样的事情的 IMAP 扩展 –允许客户端发送一个 URL 来发送变更。
 
 - 我们目前正努力[额外的通知筛选机制](https://www.fastmail.com/help/technical/sieve-notify.html)，可以发送新的邮件通知给各种服务，包括 pushover.net slack.com 和 ifttt.com 。和应用程序推送不同的是，它们是基于过滤器的，但是它们是另一种了解您在使用邮件应用程序之外的接受信息的一种尝试。
 

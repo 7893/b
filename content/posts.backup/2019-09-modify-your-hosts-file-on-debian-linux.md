@@ -1,8 +1,8 @@
 ---
 title: "Debian 无法修改 /etc/hosts 文件"
-date: 2019-09-07T01:19:00
+date: 2019-09-07T09:19:00
 slug: modify-your-hosts-file-on-debian-linux
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["AWS", "cloud", "Debian", "hostname", "hosts", "Lightsail"]
 ---
 
@@ -72,8 +72,8 @@ system_info:
     shell: /bin/bash
     lock_passwd: True
     gecos: Debian
-    groups: &#91;adm, audio, cdrom, dialout, dip, floppy, netdev, plugdev, sudo, video]
-    sudo: &#91;"ALL=(ALL) NOPASSWD:ALL"]
+    groups: [adm, audio, cdrom, dialout, dip, floppy, netdev, plugdev, sudo, video]
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
     shell: /bin/bash
 ```
 

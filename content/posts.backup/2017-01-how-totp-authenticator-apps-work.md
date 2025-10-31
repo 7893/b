@@ -1,9 +1,9 @@
 ---
 title: "How TOTP (authenticator apps) work"
-date: 2017-01-17T18:09:00
+date: 2017-01-18T02:09:00
 slug: how-totp-authenticator-apps-work
-categories: ["uncategorized"]
-tags: ["authentication", "encryption", "FastMail", "FIDO", "TOTP", "U2F", "Yubikey"]
+categories: ["Uncategorized"]
+tags: ["authentication", "encryption", "FastMail", "FIDO", "TOTP", "U2F"]
 ---
 
 这篇文章翻译自 [FastMail](https://www.fastmail.com/?STKI=16759801) 官方博客
@@ -24,8 +24,8 @@ tags: ["authentication", "encryption", "FastMail", "FIDO", "TOTP", "U2F", "Yubik
 你可以添加任意多不同的安全设备到你的 FastMail 账户；然后可以使用任何一个去验证你的账户。我们将提供三种的不同类型：
 
 ***⦁ TOTP***（Time-Based One-Time Password / 基于时间的一次性密码）
-**⦁ FIDO U2F **(Universal 2nd Factor from [the Fast IDentity Online alliance](https://fidoalliance.org/)); and
-**⦁ Yubico OTP **(a proprietary one-time password scheme from [Yubico](https://www.yubico.com/) / 来自 Yubico 公司的一个专有的一次性密码方案).
+⦁ **FIDO U2F**(Universal 2nd Factor from [the Fast IDentity Online alliance](https://fidoalliance.org/)); and
+⦁ **Yubico OTP**(a proprietary one-time password scheme from [Yubico](https://www.yubico.com/) / 来自 Yubico 公司的一个专有的一次性密码方案).
 
 一旦你设置了他们中的一个，你也可以通过你的任意密码保护手机短信得到一个一次性验证码来完成二次认证。
 
@@ -35,7 +35,7 @@ How TOTP (authenticator apps) work
 
 TOTP 代表 基于时间的一次性密码（Time-Based One-Time Password）。它是一个已经被[标准化](https://tools.ietf.org/html/rfc6238)了的基于共享密钥（意思是，被我们的服务器和你的手机共享，不是指其他人！）产生一个定期改变的代码的方法。由于它是一个标准，所以你可以在手机上使用许多不同的支持它的（大多数是免费的）认证软件。一些最流行的有 [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en), [Authy](https://www.authy.com/app/), [Duo](https://duo.com/solutions/features/two-factor-authentication-methods/duo-mobile) 和 [1Password](https://1password.com/)。
 
-当你配置 TOTP 的时候，我们的服务器产生一个安全密钥 --- 一串随机数字和字母。然后你保存这个 key 到你的手机，通常是用手机上的认证软件扫描二维码（2D bar code）（如果你的手机没有摄像头的话你可以手动输入）。
+当你配置 TOTP 的时候，我们的服务器产生一个安全密钥 — 一串随机数字和字母。然后你保存这个 key 到你的手机，通常是用手机上的认证软件扫描二维码（2D bar code）（如果你的手机没有摄像头的话你可以手动输入）。
 
 现在你的手机和我们的服务器都有一份这个安全密钥了。当你想登陆服务的时候，你需要证明你有安全密钥。怎么证明呢，你的认证软件结合当前时间（to the nearest 30 seconds）产生一个访问码。它没有使用类似“secure hash function”(对于加密头它使用的是 HMACE-SHA-1，如你所知).通俗地说，它把时间和你地密钥混合起来产生了一个唯一的输出（如果时间或者密钥有一点细微的不同则输出完全不同），但是不可逆的（输出的随机码对猜测密钥没有帮助）。为了简化输出，访问码被缩短成了六位数字。
 
@@ -45,7 +45,7 @@ TOTP 代表 基于时间的一次性密码（Time-Based One-Time Password）。�
 
 Strengths and weaknesses
 
-使用免费的 [iPhone, Android, Blackberry](https://support.google.com/accounts/answer/1066447?hl=en) 甚至 [Windows Phone](https://www.microsoft.com/en-US/store/apps/Authenticator/9WZDNCRFJ3RJ) 应用程序，TOTP 是一种快捷廉价和容易启用的二次认证方式。它也是被支持最广泛的方法 --- 你可以用同样的程序来给你的 FastMail, Google, Dropbox, GitHub 和其他的网站/服务。
+使用免费的 [iPhone, Android, Blackberry](https://support.google.com/accounts/answer/1066447?hl=en) 甚至 [Windows Phone](https://www.microsoft.com/en-US/store/apps/Authenticator/9WZDNCRFJ3RJ) 应用程序，TOTP 是一种快捷廉价和容易启用的二次认证方式。它也是被支持最广泛的方法 — 你可以用同样的程序来给你的 FastMail, Google, Dropbox, GitHub 和其他的网站/服务。
 
 它的工作原理很简单（在加密方面）而且安全。甚至攻击者看到了这个一次性密码，他们也完全不能猜测下一次产生的是什么。唯一的可行（猜测下一次产生的是什么）的方法是使用密钥，当然它被安全地保存在你地手机和我们地服务器里。
 

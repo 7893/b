@@ -1,8 +1,8 @@
 ---
 title: "Guide to use Google Cloud DNS"
-date: 2018-01-03T14:49:00
+date: 2018-01-03T22:49:00
 slug: guide-to-use-google-cloud-dns
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["Anycast", "CAA", "CloudDNS", "DKIM", "DMARC", "DNS", "DNSSEC", "gCloud", "Google", "GoogleCloudPlatform", "GoogleDomains", "SOA", "SPF"]
 ---
 
@@ -152,8 +152,8 @@ gcloud dns record-sets import ./staff-mail.zone --zone-file-format -z "staff-mai
 然后你会看到大致如下：
 
 ```
-Imported record-sets from &#91;./staff-mail.zone] into managed-zone &#91;staff-mail].
-Created &#91;https://www.googleapis.com/dns/v1/projects/project-demo-20180104/managedZones/staff-mail/changes/1].
+Imported record-sets from [./staff-mail.zone] into managed-zone [staff-mail].
+Created [https://www.googleapis.com/dns/v1/projects/project-demo-20180104/managedZones/staff-mail/changes/1].
 ID  START_TIME                STATUS
 1   2018-01-03T17:49:26.367Z  pending
 ```
@@ -267,7 +267,7 @@ gcloud dns record-sets export staff-mail.zone --zone "staff-mail" --zone-file-fo
 
 ## 添加事务
 
-这里我们添加两个事务，不使用 --transaction-file 表示使用了默认的事务文件名即"transaction.yaml"。
+这里我们添加两个事务，不使用 –transaction-file 表示使用了默认的事务文件名即"transaction.yaml"。
 
 ```
 gcloud dns record-sets transaction start --zone="staff-mail"

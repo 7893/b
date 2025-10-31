@@ -1,9 +1,9 @@
 ---
 title: "Windows 10 聚焦无法更新"
-date: 2018-01-26T08:26:00
+date: 2018-01-26T16:26:00
 slug: how-to-fix-windows-10-spotlight-to-work
-categories: ["uncategorized"]
-tags: ["POWERSHELL", "WINDOWS10"]
+categories: ["Uncategorized"]
+tags: ["POWERSHELL"]
 ---
 
 ---

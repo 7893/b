@@ -1,8 +1,8 @@
 ---
 title: "给 Linux 系统添加 swap 交换空间"
-date: 2018-07-26T01:20:00
+date: 2018-07-26T09:20:00
 slug: add-swap-to-linux
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["CentOS", "DigitalOcean", "Linode"]
 ---
 

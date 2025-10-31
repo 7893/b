@@ -1,8 +1,8 @@
 ---
 title: "安装 MongoDB 遇到的坑"
-date: 2019-03-05T01:20:00
+date: 2019-03-05T09:20:00
 slug: mongodb-installations-errors-on-linux
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["Mongo", "MongoDB"]
 ---
 

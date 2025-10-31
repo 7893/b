@@ -1,8 +1,8 @@
 ---
 title: "英特尔 Clear Linux 安装和简单使用体验"
-date: 2020-03-04T18:54:00
+date: 2020-03-05T02:54:00
 slug: clear-linux-installation-and-simple-review
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["AWS", "Azure", "ClearLinux", "DigitalOcean", "GoogleCloudPlatform", "Linux"]
 ---
 
@@ -86,7 +86,7 @@ Clear Linux 是英特尔发布的一个滚动更新的，针对英特尔架构�
 
 ### [DO](https://m.do.co/c/7210ed2e262d)
 
-[DO **是我目前（2020年3月）最推荐的体验 Clear Linux 的方式**](https://m.do.co/c/7210ed2e262d)，理由不用多说大多数人都有账号而且安装过程没有坑使用方便完事删除走人价格低廉；官方图文看[这里](https://docs.01.org/clearlinux/latest/get-started/cloud-install/digitalocean.html)，过程也很简单，直接上传[这个官方帮你搞好的镜像](https://cdn.download.clearlinux.org/releases/31870/clear/clear-31870-digitalocean.img.gz)（[https://cdn.download.clearlinux.org/releases/31870/clear/clear-31870-digitalocean.img.gz](https://cdn.download.clearlinux.org/releases/31870/clear/clear-31870-digitalocean.img.gz)）（不用担心这个镜像没有更新太老，因为滚动发行版的东西你只要一次更新即可到最新版）.
+[DO](https://m.do.co/c/7210ed2e262d) **是我目前（2020年3月）最推荐的体验 Clear Linux 的方式**，理由不用多说大多数人都有账号而且安装过程没有坑使用方便完事删除走人价格低廉；官方图文看[这里](https://docs.01.org/clearlinux/latest/get-started/cloud-install/digitalocean.html)，过程也很简单，直接上传[这个官方帮你搞好的镜像](https://cdn.download.clearlinux.org/releases/31870/clear/clear-31870-digitalocean.img.gz)（[https://cdn.download.clearlinux.org/releases/31870/clear/clear-31870-digitalocean.img.gz](https://cdn.download.clearlinux.org/releases/31870/clear/clear-31870-digitalocean.img.gz)）（不用担心这个镜像没有更新太老，因为滚动发行版的东西你只要一次更新即可到最新版）.
 
 注意：
 
@@ -150,9 +150,7 @@ man swupd
 
 官方 GitHub 在线手册网页版：
 
-```
-&#91;GitHub]&#91;17]
-```
+[GitHub](https://github.com/clearlinux/swupd-client/blob/master/docs/swupd.1.rst)
 
 查看自动更新是否打开：
 

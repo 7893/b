@@ -1,8 +1,8 @@
 ---
 title: "Amazon Route 53 使用指南"
-date: 2018-08-08T00:08:00
+date: 2018-08-08T08:08:00
 slug: guide-to-use-amazone-route-53
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["Amazon", "Anycast", "AWS", "CAA", "DKIM", "DMARC", "DNS", "DNSSEC", "domain", "GEO", "ns1", "Route53", "SPF"]
 ---
 
@@ -128,7 +128,7 @@ Route 53 解析的价格由多个因素组合而成：
 
 - 个人开发者，有多个域名假设手里有10个设置各种乱七八糟的只是自己知道的指向几乎没有人访问，有上面同款博客一个，那么每月大约 0.5 * 10 + 0.4 * (50/100) = 5.2
 
-- 米农，手里持有100个域名但是都只做了指向，有几个爆款指向每月大概加起来有25万次查询，那么每月 0.5 * 25 + 0.1 * (100 - 25) + 0.4 * (25/100) = 20.1
+- 米农，手里持有100个域名但是都只做了指向，有几个爆款指向每月大概加起来有25万次查询，那么每月 0.5 * 25 + 0.1 * (100 – 25) + 0.4 * (25/100) = 20.1
 
 以上计算还要注意区分资源的指向是谁，建立了多长时间等等价格页面的细则。大概的套路就是每项资源使用量*单价-符合免费或折扣策略的价格=总价，除了第一个托管以外其他的都是按比例收取，托管则有一个 12 小时的免费时间窗口。
 
@@ -162,9 +162,7 @@ Routing Policy（路由策略）：
 
 三流的邮箱服务商还没上 SPF 的时候二流的服务商还在拿 SFP DKIM 和 DMARC 为骄傲的时候一流的服务商现在已经**不推荐设置 SPF 记录**了，[文档](https://docs.aws.amazon.com/zh_cn/Route53/latest/DeveloperGuide/ResourceRecordTypes.html#SPFFormat)表达的理由是：
 
-> 
 > RFC 7208 中的 *Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1 (在电子邮件中授权使用域的发件人策略框架 (SPF)，版本 1)* 已更新为：“…[I]ts existence and mechanism defined in [RFC4408] have led to some interoperability issues. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it.“(…在 [RFC4408] 中定义的其存在和机制已导致一些互操作性问题。因此，它已不再适合 SPF 版本 1；实施方案中不应再使用它。) 在 RFC 7208 中，请参阅第 14.1 节 [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)。
-> 
 
 一般情况下创建了一条 DNS 记录以后这条记录大概 60秒 内传播到所有 Route 53 服务器。
 

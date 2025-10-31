@@ -1,8 +1,8 @@
 ---
 title: "PGP tools with FastMail"
-date: 2017-01-16T23:35:00
+date: 2017-01-17T07:35:00
 slug: pgp-tools-with-fastmail
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["Chrome", "encryption", "FastMail", "Firefox", "GNU", "PGP"]
 ---
 
@@ -176,9 +176,9 @@ Example GPG bootstrapping
 
 ```
 brong@wot:~$ gpg --list-keys brong@fastmail.fm
-pub   rsa2048 2015-09-20 &#91;SC] &#91;expired: 2016-09-19]
+pub   rsa2048 2015-09-20 [SC] [expired: 2016-09-19]
       0FBAC288980E770A5A789BA1410D67927CA469F8
-uid           &#91; expired] Bron Gondwana 
+uid           [ expired] Bron Gondwana 
 ```
 
 看看自从我上次签名东西已经过了多久了！
@@ -221,10 +221,10 @@ gpg: directory '/home/brong/.gnupg/openpgp-revocs.d' created
 gpg: revocation certificate stored as '/home/brong/.gnupg/openpgp-revocs.d/8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993.rev'
 public and secret key created and signed.
 
-pub   rsa2048 2016-12-22 &#91;SC]
+pub   rsa2048 2016-12-22 [SC]
       8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993
 uid                      Bron Gondwana 
-sub   rsa2048 2016-12-22 &#91;E]
+sub   rsa2048 2016-12-22 [E]
 
 brong@wot:~$`
 ```

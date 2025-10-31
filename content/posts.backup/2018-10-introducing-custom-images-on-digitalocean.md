@@ -1,8 +1,8 @@
 ---
 title: "新功能介绍：DigitalOcean 自定义镜像"
-date: 2018-10-06T01:19:00
+date: 2018-10-06T09:19:00
 slug: introducing-custom-images-on-digitalocean
-categories: ["uncategorized"]
+categories: ["Uncategorized"]
 tags: ["DigitalOcean", "VirtualBox"]
 ---
 
