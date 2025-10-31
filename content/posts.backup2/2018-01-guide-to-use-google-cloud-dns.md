@@ -21,18 +21,23 @@ Google Cloud DNS 根据网文介绍之前是有 5K 每天的免费查询额度�
 
 特性
 
-1. 前面已经提过支持 Anycast 和 DNSSEC 并且 100% SLA 保证。
-2. 除了常规的记录类型以外，当前还支持 CAA IPSECKEY NAPTR NS PTR SOA SSHFP 和 TLSA 记录。虽然支持 SPF 类型，但我还是强烈建议把 SPF 按照 TXT 类型来写。[支持记录类型细节](https://cloud.google.com/dns/overview?hl=en_US#supported_dns_record_types)
-3. 最低 1秒 TTL。
-4. SOA 可以编辑
-5. 支持多级域名，不限于顶级域名。
+- 前面已经提过支持 Anycast 和 DNSSEC 并且 100% SLA 保证。
+
+- 除了常规的记录类型以外，当前还支持 CAA IPSECKEY NAPTR NS PTR SOA SSHFP 和 TLSA 记录。虽然支持 SPF 类型，但我还是强烈建议把 SPF 按照 TXT 类型来写。[支持记录类型细节](https://cloud.google.com/dns/overview?hl=en_US#supported_dns_record_types)
+
+- 最低 1秒 TTL。
+
+- SOA 可以编辑
+
+- 支持多级域名，不限于顶级域名。
 
 先决条件
 
 使用 Google Cloud DNS 之前，需要满足这两个条件：
 
-1. **启用账单**，就是添加了信用卡而且你当前的项目链接到了某个账单账户。对于中国大陆用户而言，Google 接受 Visa MasterCard 借记卡和 Visa MasterCard AmericanExpress 大莱卡（Diners Card）和 JCB 实体信用卡。不接受虚拟卡和预付卡。国内发卡行发行的信用卡（62 开头银联不行）基本都是可以接受。[支付细节](https://cloud.google.com/billing/docs/how-to/payment-methods)
-2. **安装 gcloud** 。（这个主要是为了导入和进行大量操作而准备，如果你的域名和域名记录数不多的话或者你可以接受手工操作的话则不必安装（仅仅针对 Google Cloud DNS 而言，对于其他 Google Cloud Platf 产品而言是否需要安装取决于你自己的需求））。我比较推荐在国外的 VPS 上安装 gcloud 客户端，如果你在试用国内的 VPS 的国内节点或者是国外 VPS 的国内节点等不能从 VPS 内访问谷歌的话则不要安装在此类 VPS 上。要安装在可以访问谷歌的 VPS 上。[安装细节](https://cloud.google.com/compute/docs/gcloud-compute/)
+- **启用账单**，就是添加了信用卡而且你当前的项目链接到了某个账单账户。对于中国大陆用户而言，Google 接受 Visa MasterCard 借记卡和 Visa MasterCard AmericanExpress 大莱卡（Diners Card）和 JCB 实体信用卡。不接受虚拟卡和预付卡。国内发卡行发行的信用卡（62 开头银联不行）基本都是可以接受。[支付细节](https://cloud.google.com/billing/docs/how-to/payment-methods)
+
+- **安装 gcloud** 。（这个主要是为了导入和进行大量操作而准备，如果你的域名和域名记录数不多的话或者你可以接受手工操作的话则不必安装（仅仅针对 Google Cloud DNS 而言，对于其他 Google Cloud Platf 产品而言是否需要安装取决于你自己的需求））。我比较推荐在国外的 VPS 上安装 gcloud 客户端，如果你在试用国内的 VPS 的国内节点或者是国外 VPS 的国内节点等不能从 VPS 内访问谷歌的话则不要安装在此类 VPS 上。要安装在可以访问谷歌的 VPS 上。[安装细节](https://cloud.google.com/compute/docs/gcloud-compute/)
 
 日志记录
 
@@ -52,13 +57,19 @@ gcloud dns 工具提供了三类操作对象：**managed-zones** **project-info*
 
 假设我们要操作如下任务：
 
-1. 添加一个叫做 "staff-mail" 的 staff.mail.eg.zone 域名到一个叫做 "project-demo-20180104" 的项目下；
-2. 给这个域名添加 1 个 A 记录 和 1 个 AAAA 记录；
-3. 给这个域名添加 1 个 DKIM 和 1 个 DMARC 的 TXT 类型记录；（关于 SPF DKIM 和 DMARC [参考本文](https://6ki.org/2017/01/spf-dkim-and-dmarc.html)）
-4. 给这个域名添加 2 个 MX 记录；
-5. 把 MX 和 DKIM 和 DMARC 放到一个叫做 "exmail" 的事务中；
-6. 控制 "exmail" 事务的行为；
-7. 查看记录变更细节；
+- 添加一个叫做 "staff-mail" 的 staff.mail.eg.zone 域名到一个叫做 "project-demo-20180104" 的项目下；
+
+- 给这个域名添加 1 个 A 记录 和 1 个 AAAA 记录；
+
+- 给这个域名添加 1 个 DKIM 和 1 个 DMARC 的 TXT 类型记录；（关于 SPF DKIM 和 DMARC [参考本文](https://6ki.org/2017/01/spf-dkim-and-dmarc.html)）
+
+- 给这个域名添加 2 个 MX 记录；
+
+- 把 MX 和 DKIM 和 DMARC 放到一个叫做 "exmail" 的事务中；
+
+- 控制 "exmail" 事务的行为；
+
+- 查看记录变更细节；
 
 ## 添加域名
 
@@ -141,16 +152,17 @@ gcloud dns record-sets import ./staff-mail.zone --zone-file-format -z "staff-mai
 然后你会看到大致如下：
 
 ```
-Imported record-sets from [./staff-mail.zone] into managed-zone [staff-mail].
-Created [https://www.googleapis.com/dns/v1/projects/project-demo-20180104/managedZones/staff-mail/changes/1].
+Imported record-sets from &#91;./staff-mail.zone] into managed-zone &#91;staff-mail].
+Created &#91;https://www.googleapis.com/dns/v1/projects/project-demo-20180104/managedZones/staff-mail/changes/1].
 ID  START_TIME                STATUS
 1   2018-01-03T17:49:26.367Z  pending
 ```
 
 关于导入的小提示：
 
-1. 注释掉 ns 和 soa 记录，因为你的 zone 文件来自于先前的 dns 服务商，很明显这里要使用 Google Cloud DNS 的新内容了，如果你对 SOA 记录的部分内容有修改需求，可以等导入以后再图形界面修改即可。
-2. 部分 txt 字段过长可能会导致导入失败，当前已知如果你的 Gsuite 的 dkim 使用了 2048 位的话会因为记录过长而导入失败，所以需要改成 1024 位。
+- 注释掉 ns 和 soa 记录，因为你的 zone 文件来自于先前的 dns 服务商，很明显这里要使用 Google Cloud DNS 的新内容了，如果你对 SOA 记录的部分内容有修改需求，可以等导入以后再图形界面修改即可。
+
+- 部分 txt 字段过长可能会导致导入失败，当前已知如果你的 Gsuite 的 dkim 使用了 2048 位的话会因为记录过长而导入失败，所以需要改成 1024 位。
 
 ## 导出记录
 
@@ -311,8 +323,11 @@ gcloud beta dns managed-zones update "staff-mail" --dnssec-state off
 ## DNSSEC 状态验证
 
 - [http://dnsviz.net/](http://dnsviz.net/)
+
 - [https://zonalizer.makeinstall.se/](https://zonalizer.makeinstall.se/)
+
 - [http://dnssec-debugger.verisignlabs.com/](http://dnssec-debugger.verisignlabs.com/)
+
 - [https://zonemaster.net/](https://support.google.com/domains/answer/6010092)
 
 其他使用 Google Cloud DNS 办法
@@ -321,16 +336,24 @@ gcloud beta dns managed-zones update "staff-mail" --dnssec-state off
 
 ## Google Domains 自带 DNS 解析大致特性
 
-1. 内建支持 DNSSEC 而且方便使用只需要启用即可，手动添加 DS 的步骤都省了；
-2. 支持动态 DNS 解析；
-3. 支持一键设置 Gsuite 各种相关的 DNS 记录；
-4. 支持设置跳转；
-5. 可以设置胶水记录（glue records）；
-6. 支持 CAA DS SSHFP TLSA 记录；
-7. 但是当前已知 Google Domains 自带 DNS 限制每个域名只有 100 条记录（对一般需求绝对够用）；
+- 内建支持 DNSSEC 而且方便使用只需要启用即可，手动添加 DS 的步骤都省了；
+
+- 支持动态 DNS 解析；
+
+- 支持一键设置 Gsuite 各种相关的 DNS 记录；
+
+- 支持设置跳转；
+
+- 可以设置胶水记录（glue records）；
+
+- 支持 CAA DS SSHFP TLSA 记录；
+
+- 但是当前已知 Google Domains 自带 DNS 限制每个域名只有 100 条记录（对一般需求绝对够用）；
 
 ## Google Domains 官方页面
 
-1. [Google Domains 价格列表和支持的域名类型](https://support.google.com/domains/answer/6010092)
-2. [Google Domains 帮助页面](https://support.google.com/domains)
-3. [Google Domains 官方特性介绍](https://domains.google/?hl=en-US&_ga=2.190674338.841723577.1515056824-1687665163.1515056824#domains-features)
+- [Google Domains 价格列表和支持的域名类型](https://support.google.com/domains/answer/6010092)
+
+- [Google Domains 帮助页面](https://support.google.com/domains)
+
+- [Google Domains 官方特性介绍](https://domains.google/?hl=en-US&_ga=2.190674338.841723577.1515056824-1687665163.1515056824#domains-features)

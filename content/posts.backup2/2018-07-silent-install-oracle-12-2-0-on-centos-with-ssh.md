@@ -210,7 +210,7 @@ vim /etc/tuned/no-thp/tuned.conf
 输入以下内容：
 
 ```
-[main]
+&#91;main]
 include=virtual-guest
 ```
 
@@ -236,7 +236,7 @@ cat /sys/kernel/mm/transparent_hugepage/defrag
 如果两句都输出
 
 ```
-always madvise [never]
+always madvise &#91;never]
 ```
 
 说明成功。
@@ -405,7 +405,7 @@ mkdir -p /u01/app/12.2.0/grid
 # filename:linuxx64_12201_database.zip
 # fllesize:3293.7MB(3.2GB)
 
-wget http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip?AuthParam=[all-full-url-with-your-own-login]
+wget http://download.oracle.com/otn/linux/oracle12c/122010/linuxx64_12201_database.zip?AuthParam=&#91;all-full-url-with-your-own-login]
 
 unzip linuxx64_12201_database.zip -d /u01/app/stage/
 ```
@@ -476,11 +476,11 @@ oracle.install.db.OSRACDBA_GROUP=racdba
 oracle.install.db.config.starterdb.type=GENERAL_PURPOSE
 #oracle.install.db.config.starterdb.SID=orcl
 oracle.install.db.config.starterdb.characterSet=ZHS16GBK
-oracle.install.db.config.starterdb.password.ALL=[YourPassword]
-oracle.install.db.config.starterdb.password.DBSNMP=[YourUserName]
+oracle.install.db.config.starterdb.password.ALL=&#91;YourPassword]
+oracle.install.db.config.starterdb.password.DBSNMP=&#91;YourUserName]
 oracle.install.db.config.starterdb.managementOption=CLOUD_CONTROL
-oracle.install.db.config.starterdb.emAdminUser=[YourUserName]
-oracle.install.db.config.starterdb.emAdminPassword=[YourPassword]
+oracle.install.db.config.starterdb.emAdminUser=&#91;YourUserName]
+oracle.install.db.config.starterdb.emAdminPassword=&#91;YourPassword]
 ```
 
 ## 过程安装
@@ -499,7 +499,7 @@ Starting Oracle Universal Installer...
 
 Checking Temp space: must be greater than 500 MB.   Actual 38822 MBPassed
 Checking swap space: must be greater than 150 MB.   Actual 1999 MBPassed
-Preparing to launch Oracle Universal Installer from /tmp/OraInstall2018-07-12_04-42-48PM. Please wait ...[oracle@instance8 database]$ You can find the log of this install session at:
+Preparing to launch Oracle Universal Installer from /tmp/OraInstall2018-07-12_04-42-48PM. Please wait ...&#91;oracle@instance8 database]$ You can find the log of this install session at:
  /u01/app/oraInventory/logs/installActions2018-07-12_04-42-48PM.log
 The installation of Oracle Database 12c was successful.
 Please check '/u01/app/oraInventory/logs/silentInstall2018-07-12_04-42-48PM.log' for more details.
@@ -583,9 +583,9 @@ vim /u01/app/oracle/etc/dbca.rsp
 ```
 gdbName=db1
 sid=db1sid
-sysPassword=[YourPassword]
-systemPassword=[YourPassword]
-dbsnmpPassword=[YourPassword]
+sysPassword=&#91;YourPassword]
+systemPassword=&#91;YourPassword]
+dbsnmpPassword=&#91;YourPassword]
 CHARACTERSET=ZHS16GBK
 # 注意 Oracle 推荐的密码长度为 8位并且包含数字大小写字母各 1为，如果密码太弱下一步会提示警告
 ```
@@ -599,14 +599,14 @@ dbca -silent -createDatabase -templateName General_Purpose.dbc -responseFile /u0
 输出如下：
 
 ```
-[WARNING] [DBT-06208] The 'SYS' password entered does not conform to the Oracle recommended standards.
+&#91;WARNING] &#91;DBT-06208] The 'SYS' password entered does not conform to the Oracle recommended standards.
    CAUSE: 
-a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit &#91;0-9].
 b.The password entered is a keyword that Oracle does not recommend to be used as password
    ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
-[WARNING] [DBT-06208] The 'SYSTEM' password entered does not conform to the Oracle recommended standards.
+&#91;WARNING] &#91;DBT-06208] The 'SYSTEM' password entered does not conform to the Oracle recommended standards.
    CAUSE: 
-a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit &#91;0-9].
 b.The password entered is a keyword that Oracle does not recommend to be used as password
    ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
 Copying database files

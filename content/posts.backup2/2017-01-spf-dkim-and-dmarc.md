@@ -65,8 +65,9 @@ DMARC
 [DMARC (Domain-based Message Authentication, Reporting & Conformance)](https://en.wikipedia.org/wiki/DMARC) 试图解决 SPF 和 DKIM 二者遗留的可信问提。仍然，通过 DNS 记录，域所有者可以定义邮件接收者接受到邮件后的行为。就 DMARC 来说，我们通过查看发件人字段认为邮件来自一个特定的域：--当你收到邮件的时候看到的地址。
 基本上，在你设置一个 DMARC 记录后邮件接收者应该：
 
-1. 检查发件人字段的域是否匹配 DKIM 签名的域（这个过程叫做 校验（[alignment](https://en.wikipedia.org/wiki/DMARC#Alignment)））以及 DKIM 签名是否有效；
-2. 检查发件人域头字段是否匹配 SMTP 的 MAIL FROM 域以及发件人的 IP 地址是否被 SPF 所允许；
+- 检查发件人字段的域是否匹配 DKIM 签名的域（这个过程叫做 校验（[alignment](https://en.wikipedia.org/wiki/DMARC#Alignment)））以及 DKIM 签名是否有效；
+
+- 检查发件人域头字段是否匹配 SMTP 的 MAIL FROM 域以及发件人的 IP 地址是否被 SPF 所允许；
 
 如果有**其一（either）**检查通过，则这封邮件的 DMARC 则通过检查。如果都检查失败， DMARC 的 DNS 记录规定了接收方应该采取的行为，包括隔离邮件（发送到你的垃圾邮件箱）或者拒收。此外， DMARC 记录可以指定一个电子邮件地址来接受 DMARC 报告。 DMARC 还允许发送方指定 DMARC 记录生效的邮件百分比，所以可以以一种逐渐地可控地方式进行 DMARC 的配置。
 回到我们的例子邮件中：
@@ -98,9 +99,11 @@ DMARC 允许你使用 SPF 或 DKIM 来验证一封邮件。如果你没有 DKIM 
 我说仍是可用的（should survive），因为，再次地，并不是所有地电子邮件服务商都完美支持。这个理论之下，转发保证了你地邮件地完整结构。不幸的是，并不总是如此。甚至大的电子邮件服务商也会不经意间略微地改变电子邮件的内容/结构（基于微软 [Exchange](https://blogs.msdn.microsoft.com/tzink/2016/05/19/why-does-my-email-from-facebook-that-i-forward-from-my-outlook-com-account-get-rejected/) 的邮件系统（包括 outlook.com）和苹果 iCloud 在这方面做的更差一些）。甚至一个微小的修改都会导致 DKIM 签名失败，而且，结合 DMARC 的 p=reject 规则的话，会导致这封转发邮件被目标服务商拒收。
 解决方案如下：
 
-1. 给这些邮件服务商反馈 bug 让他们完善他们的转发系统以便在传输过程中邮件保持完整性。DKIM 目前已经是一个标准了，电子邮件服务商应该确保他们的转发不破坏邮件签名。
-2. 转而使用 POP 协议从远端获取邮件。我们不对通过 POP 方式获取的远端邮件做 SPF/DKIM/DMARC 检查。
-3. 不要使用邮件转发。不管邮件从哪里来，改变你的邮件服务商所在的邮件地址让它直接指向 FastMail 的邮件地址，避免转发。
+- 给这些邮件服务商反馈 bug 让他们完善他们的转发系统以便在传输过程中邮件保持完整性。DKIM 目前已经是一个标准了，电子邮件服务商应该确保他们的转发不破坏邮件签名。
+
+- 转而使用 POP 协议从远端获取邮件。我们不对通过 POP 方式获取的远端邮件做 SPF/DKIM/DMARC 检查。
+
+- 不要使用邮件转发。不管邮件从哪里来，改变你的邮件服务商所在的邮件地址让它直接指向 FastMail 的邮件地址，避免转发。
 
 DMARC 还有个大问题：邮件列表。邮件列表被认为是个邮件转发的特例：你发了一封邮件，这封邮件被转发给了其他地址（邮件列表中的地址）。然而，邮件列表转发邮件的时候普遍都会修改邮件，在每一封邮件的底部加入一些取消订阅邮件的链接或者标准标准签名和/或在标题加入`[list-id]`标签。
 DKIM 签名标题和正文是非常普遍的。改变它们就会破坏 DKIM 签名。所以，那么当邮件列表软件尝试转发邮件给所有的列表用户的时候，收取邮件的系统将会破坏 DKIM 签名从而导致邮件被拒收。（有件具有代表性的事情是 许多年前雅虎和AOL邮件系统都启用 p=reject ([Yahoo and AOL both enabled p=reject on their user webmail service domains a few years ago!](https://www.ietf.org/mail-archive/web/ietf/current/msg87153.html)）
@@ -148,7 +151,7 @@ Ongoing problems
 From: No Reply  To:
 foobar@fastmail.com Subject: Urgent! Your account is going to be closed!
 
-Click [here](http://example.com) right now or your account will be closed
+Click &#91;here](http://example.com) right now or your account will be closed
 ```
 
 很多用户就点开了链接，在一个伪造的页面上输入了登陆信息（甚至包括那些看起来都不是 FastMail 的页面的页面），我们每天都能遇到各种各样的账号被盗。不幸的是，试图教用户（[educate users](http://www.ranum.com/security/computer_security/editorials/dumb/) ）貌似并不奏效。

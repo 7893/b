@@ -72,8 +72,8 @@ system_info:
     shell: /bin/bash
     lock_passwd: True
     gecos: Debian
-    groups: [adm, audio, cdrom, dialout, dip, floppy, netdev, plugdev, sudo, video]
-    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    groups: &#91;adm, audio, cdrom, dialout, dip, floppy, netdev, plugdev, sudo, video]
+    sudo: &#91;"ALL=(ALL) NOPASSWD:ALL"]
     shell: /bin/bash
 ```
 

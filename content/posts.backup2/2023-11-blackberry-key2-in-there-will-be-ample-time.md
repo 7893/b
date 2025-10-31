@@ -28,6 +28,6 @@ tags: ["BlackBerry", "smartphone"]
 
 [BlackBerry Key2](https://en.wikipedia.org/wiki/BlackBerry_Key2)
 
-[BlackBerry’s Transformation Journey and Our Smartphone Heritage](https://blogs.blackberry.com/en/2022/01/blackberrys-transformation-journey-and-our-smartphone-heritage)
+[BlackBerry’s Transformation Journey and Our Smartphone Heritage](https://blogs.blackberry.com/en/2022/01/blackberrys-transformation-journey-and-our-smartphone-heritage) 
 
 [BlackBerry 10 and BlackBerry OS Services FAQ](https://www.blackberry.com/us/en/support/devices/end-of-life)

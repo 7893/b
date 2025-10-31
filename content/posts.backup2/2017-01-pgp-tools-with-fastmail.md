@@ -26,12 +26,15 @@ Browser plugins
 ## [Mailvelope](https://www.mailvelope.com/)
 
 - 支持平台：Firefox Chrome
+
 - [使用说明](https://www.mailvelope.com/help)
 
 ## [WebPG](https://webpg.org/)
 
 - 支持平台：Firefox Chrome 雷鸟 SeaMonkey
+
 - 先决条件：需要系统中已经安装 [GnuPG 和 Key Agent](https://webpg.org/docs/webpg-userdocs/#!/guide/prerequisites)
+
 - [使用说明](https://webpg.org/docs/webpg-userdocs/#!/guide/introduction)
 
 Native clients
@@ -41,7 +44,9 @@ Native clients
 ### [GPGTools](https://gpgtools.org/)
 
 - 支持平台：macOS
+
 - 可以用于系统自带邮件客户端，但是当前不兼容 macOS Sierra(10.12版本),临时方案（[workaround](https://gpgtools.tenderapp.com/kb/gpgmail-faq/gpgmail-no-longer-working-after-macos-update4)）.
+
 - [使用说明](https://gpgtools.tenderapp.com/kb/how-to/first-steps-where-do-i-start-where-do-i-begin)
 
 ## iOS(iPhone/iPad)
@@ -55,6 +60,7 @@ Native clients
 ### [PGPEverywhere](http://pgpeverywhere.com/)
 
 - [使用说明](http://pgpeverywhere.com/help.html)
+
 - 常见问题中说他们正在[考虑开源](http://www.pgpeverywhere.com/faq.html)
 
 ## Windows/Linux
@@ -62,15 +68,21 @@ Native clients
 安装一个带有插件功能的客户端以便启用 PGP 功能
 
 - [雷鸟](http://www.mozilla.org/thunderbird/)（多平台支持）
+
 - [Postbox](https://www.postbox-inc.com/)（Windows，非开源软件）
 
 Plugins:
 
 - [WebPG](https://webpg.org/)
+
 - 需要系统中已经安装 [GnuPG 和 Key Agent](https://webpg.org/docs/webpg-userdocs/#!/guide/prerequisites)
+
 - [使用说明](https://webpg.org/docs/webpg-userdocs/#!/guide/introduction)
+
 - [Enigmail](https://www.enigmail.net/index.php/en/)
+
 - 需要已经安装 [GnuPG](https://enigmail.wiki/Installation_of_Enigmail)
+
 - [使用说明](https://www.enigmail.net/index.php/en/documentation/user-manual)
 
 ## Android
@@ -78,7 +90,9 @@ Plugins:
 ### [openKeychain](https://www.openkeychain.org/)
 
 - 和邮件客户端配合使用比如 K-9
+
 - 他们有[一个兼容的客户端列表](https://www.openkeychain.org/apps/)
+
 - [使用说明](https://www.openkeychain.org/howto/#/)
 
 ## Command Line
@@ -162,9 +176,9 @@ Example GPG bootstrapping
 
 ```
 brong@wot:~$ gpg --list-keys brong@fastmail.fm
-pub   rsa2048 2015-09-20 [SC] [expired: 2016-09-19]
+pub   rsa2048 2015-09-20 &#91;SC] &#91;expired: 2016-09-19]
       0FBAC288980E770A5A789BA1410D67927CA469F8
-uid           [ expired] Bron Gondwana 
+uid           &#91; expired] Bron Gondwana 
 ```
 
 看看自从我上次签名东西已经过了多久了！
@@ -207,10 +221,10 @@ gpg: directory '/home/brong/.gnupg/openpgp-revocs.d' created
 gpg: revocation certificate stored as '/home/brong/.gnupg/openpgp-revocs.d/8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993.rev'
 public and secret key created and signed.
 
-pub   rsa2048 2016-12-22 [SC]
+pub   rsa2048 2016-12-22 &#91;SC]
       8D8DEE2A5F30EF2E617BB2BBD92B20BCF922A993
 uid                      Bron Gondwana 
-sub   rsa2048 2016-12-22 [E]
+sub   rsa2048 2016-12-22 &#91;E]
 
 brong@wot:~$`
 ```

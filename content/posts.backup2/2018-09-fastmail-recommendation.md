@@ -173,8 +173,13 @@ FastMail Files 不支持 IPv6
 其他中文资源
 
 - [维基百科中文](https://zh.wikipedia.org/wiki/FastMail)
+
 - https://blog.blahgeek.com/fastmail-is-good/
+
 - https://www.v2ex.com/t/157584
+
 - https://www.v2ex.com/t/323193
+
 - [安利好用的邮件服务之Fastmail](https://medium.com/@clarkzjw/%E5%AE%89%E5%88%A9%E5%A5%BD%E7%94%A8%E7%9A%84%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E4%B9%8Bfastmail-3f335bebdaaf)
+
 - https://blog.yangl1996.com/post/switch-from-gmail-to-fastmail/

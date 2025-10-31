@@ -82,7 +82,9 @@ The future
 我们当前正在尝试一些可能会也可能不会改变这种现状的事情：
 
 - [JMAP](https://jmap.io/) 定义了[一个推送协议](http://jmap.io/spec-core.html#push)，使用 [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) 或者和移动运营商差不多的推送。JMAP 推送的工作方式是在登陆的时候，客户端给服务端发送一个推送的 URL，而不像其他那种特定的推送令牌（"push token".）。当服务器上有改变的时候服务器只是简单地发送“服务器有改动”这样地消息（符合 JMAP 的数据格式）给那个URL。消息从推送服务到客户端的细节不在JMAP的范围之内，但在理论上它意味着用户可以选择使用推送服务（可能甚至是自己的）。
+
 - 我们曾经考虑过（但是目前没有实施的计划）一个可以做同样的事情的 IMAP 扩展 --允许客户端发送一个 URL 来发送变更。
+
 - 我们目前正努力[额外的通知筛选机制](https://www.fastmail.com/help/technical/sieve-notify.html)，可以发送新的邮件通知给各种服务，包括 pushover.net slack.com 和 ifttt.com 。和应用程序推送不同的是，它们是基于过滤器的，但是它们是另一种了解您在使用邮件应用程序之外的接受信息的一种尝试。
 
 时间将会说明这些尝试何去何从。这些是需要不同的客户端和服务端参与以便观察效果的事儿。这不是我们独立可以完成的事，但如果你是邮件客户端作者而且你想获得比 IMAP IDLE 更好的推送效果的话，可以和我们聊聊。

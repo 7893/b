@@ -123,9 +123,11 @@ DigitalOcean DNS 算不上专业的 DNS，官网的介绍页面也很少，但�
 
 **提示：**
 
-1. 官方时不时在一个专门的页面有优惠券送；
-2. 如果你的账号一段时间内没有激活的服务则账号会被关闭；
-3. （第三方搜到的优惠券可能比官方的优惠力度大）；
+- 官方时不时在一个专门的页面有优惠券送；
+
+- 如果你的账号一段时间内没有激活的服务则账号会被关闭；
+
+- （第三方搜到的优惠券可能比官方的优惠力度大）；
 
 ## [Constellix](https://constellix.com/)
 
@@ -241,10 +243,13 @@ DNS 领域的全球老大哥 DNS Made Easy 团队设计开发的 DNS 产品，�
 
 **提示：**
 
-1. 因为生效速度慢的问题，所以先把你要解析的域名的 ns 修改成 he 的（ns1.he.net ns2.he.ent ns3.he.net ns4.he.net ns5.he.net），然后再去添加域名;如果你的 NS 只能添加四条的话，随便选择四条即可，建议写除了 ns1 以外的四条；
-2. 官方提示建议把资料改成你真实的，以便在需要的时候证明你的身份和你的拥有关系；
-3. 修改个人资料的地方是 页面左侧“Quick Links”中的“Certification”页面，登陆以后点击左上角的“Update Info”即可修改个人资料；
-4. 由于 HE.net 账号是可删除的，而且支持二次验证登陆，所以当你有重要的域名在上面的时候建议启用二次验证。
+- 因为生效速度慢的问题，所以先把你要解析的域名的 ns 修改成 he 的（ns1.he.net ns2.he.ent ns3.he.net ns4.he.net ns5.he.net），然后再去添加域名;如果你的 NS 只能添加四条的话，随便选择四条即可，建议写除了 ns1 以外的四条；
+
+- 官方提示建议把资料改成你真实的，以便在需要的时候证明你的身份和你的拥有关系；
+
+- 修改个人资料的地方是 页面左侧“Quick Links”中的“Certification”页面，登陆以后点击左上角的“Update Info”即可修改个人资料；
+
+- 由于 HE.net 账号是可删除的，而且支持二次验证登陆，所以当你有重要的域名在上面的时候建议启用二次验证。
 
 ## [CloudfloorDNS](https://www.cloudfloordns.com/)
 
@@ -300,10 +305,13 @@ Namecheap 作为 eNom 的代理商，是价格合理，活动多，服务比较�
 
 **几条友好提示：**
 
-1. 付费 PremiumDNS 可以给任何注册商的任意域名使用，不管域名是不是注册在 Namecheap；
-2. 一个付费 PremiumDNS 只能使用一个域名，以后不能切换到其他域名；
-3. 如果你要使用 DNSSEC 功能的话，则域名必须注册在 Namecheap；
-4. 当前只支持14中后缀的域名使用 DNSSEC，具体参看 [https://www.namecheap.com/support/knowledgebase/article.aspx/9718/2232/nameservers-and-tlds-supportedunsupported-by-dnssec](https://www.namecheap.com/support/knowledgebase/article.aspx/9718/2232/nameservers-and-tlds-supportedunsupported-by-dnssec)
+- 付费 PremiumDNS 可以给任何注册商的任意域名使用，不管域名是不是注册在 Namecheap；
+
+- 一个付费 PremiumDNS 只能使用一个域名，以后不能切换到其他域名；
+
+- 如果你要使用 DNSSEC 功能的话，则域名必须注册在 Namecheap；
+
+- 当前只支持14中后缀的域名使用 DNSSEC，具体参看 [https://www.namecheap.com/support/knowledgebase/article.aspx/9718/2232/nameservers-and-tlds-supportedunsupported-by-dnssec](https://www.namecheap.com/support/knowledgebase/article.aspx/9718/2232/nameservers-and-tlds-supportedunsupported-by-dnssec)
 
 **特别注意：**.org 不支持 DNSSEC
 
@@ -331,12 +339,17 @@ Route 53 支持两种服务，一种是公网解析，就是我们平常所说�
 
 **费用方面：**费用由这么几个方面组成：
 
-1. 托管的域名数量
-2. Traffic Flow 记录数
-3. 标准查询数
-4. 基于延迟的路由查询数
-5. Geo DNS 和临近地理位置查询
-6. 运行状况检查
+- 托管的域名数量
+
+- Traffic Flow 记录数
+
+- 标准查询数
+
+- 基于延迟的路由查询数
+
+- Geo DNS 和临近地理位置查询
+
+- 运行状况检查
 
 如果不是大流量的企业客户，只需要关注托管的域名数量和标准查询的数量即可，基本上标准查询大多数普通用户也都再第一阶梯内，值得注意的是，Route53 设置域名以后不会立马收费，如果你在12小时内删除（比如仅体验或者做测试）则是不收费的，如果是超过12小时，则按照完整一个月的费用收取。于定价的详细信息 [https://aws.amazon.com/cn/route53/pricing/](https://aws.amazon.com/cn/route53/pricing/)
 
