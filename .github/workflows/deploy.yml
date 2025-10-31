@@ -76,7 +76,5 @@ jobs:
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         projectName: 'b'
         directory: './public'
-        # Optional: Enable production deployment
-        gitBranch: 'main'
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
