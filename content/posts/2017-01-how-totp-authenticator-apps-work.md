@@ -24,8 +24,8 @@ tags: ["authentication", "encryption", "FastMail", "FIDO", "TOTP", "U2F", "Yubik
 你可以添加任意多不同的安全设备到你的 FastMail 账户；然后可以使用任何一个去验证你的账户。我们将提供三种的不同类型：
 
 ***⦁ TOTP***（Time-Based One-Time Password / 基于时间的一次性密码）
-**⦁ FIDO U2F **(Universal 2nd Factor from [the Fast IDentity Online alliance](https://fidoalliance.org/)); and
-**⦁ Yubico OTP **(a proprietary one-time password scheme from [Yubico](https://www.yubico.com/) / 来自 Yubico 公司的一个专有的一次性密码方案).
+****⦁ FIDO U2F ****(Universal 2nd Factor from [the Fast IDentity Online alliance](https://fidoalliance.org/)); and
+****⦁ Yubico OTP ****(a proprietary one-time password scheme from [Yubico](https://www.yubico.com/) / 来自 Yubico 公司的一个专有的一次性密码方案).
 
 一旦你设置了他们中的一个，你也可以通过你的任意密码保护手机短信得到一个一次性验证码来完成二次认证。
 
