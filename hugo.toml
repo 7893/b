@@ -6,6 +6,18 @@ enableRobotsTXT = true
 enableGitInfo = false
 hasCJKLanguage = true
 
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+    style = 'monokai'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [sitemap]
 changefreq = 'weekly'
 filename = 'sitemap.xml'
