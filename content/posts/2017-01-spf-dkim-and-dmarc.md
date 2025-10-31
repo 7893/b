@@ -3,7 +3,7 @@ title: "SPF, DKIM & DMARC email anti-spoofing technology history and future"
 date: 2017-01-11T13:37:00
 slug: spf-dkim-and-dmarc
 categories: ["Uncategorized"]
-tags: ["ARC", "authentication", "DKIM", "DMARC", "DNS", "domain", "Exchange", "FastMail", "IMAP", "POP3", "SMTP", "spam", "SPF", "SRS", ""]
+tags: ["ARC", "authentication", "DKIM", "DMARC", "DNS", "domain", "Exchange", "FastMail", "IMAP", "POP3", "SMTP", "spam", "SPF", "SRS"]
 ---
 
 ---

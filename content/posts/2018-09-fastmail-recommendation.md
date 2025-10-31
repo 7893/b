@@ -3,7 +3,7 @@ title: "推荐 FastMail ：优秀邮箱服务"
 date: 2018-09-09T09:19:00
 slug: fastmail-recommendation
 categories: ["Uncategorized"]
-tags: ["authentication", "DKIM", "DMARC", "DNS", "domain", "FastMail", "Gmail", "Google", "IMAP", "PayPal", "PGP", "POP3", "recommendation", "SPF", "TOTP", "U2F", "", ""]
+tags: ["authentication", "DKIM", "DMARC", "DNS", "domain", "FastMail", "Gmail", "Google", "IMAP", "PayPal", "PGP", "POP3", "recommendation", "SPF", "TOTP", "U2F"]
 ---
 
 网上介绍/推荐 FastMail 的大佬和文章已经比较多了，最近我的 FastMail 一年付费周期快到了要续费了，想了想这个服务简直6到起飞所以我再来推一波。之前的帖子可能无法说清楚 FastMail 的方方面面，我说点（可能）其他大佬（可能）没有提到的东西。
