@@ -1,0 +1,47 @@
+/* 优化代码块样式 */
+pre, code {
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    pre, code {
+        font-size: 0.8rem !important;
+    }
+    
+    pre {
+        padding: 0.75rem !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* 行内代码 */
+code:not(pre code) {
+    padding: 0.2em 0.4em;
+    font-size: 0.85em !important;
+    background-color: var(--code-bg);
+    border-radius: 3px;
+}
+
+/* 代码块 */
+pre code {
+    display: block;
+    padding: 0;
+    background: transparent;
+}
+
+/* 优化代码块滚动条 */
+pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: var(--code-block-bg);
+}
