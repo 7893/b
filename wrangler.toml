@@ -1,7 +1,4 @@
 name = "b"
-main = "worker.js"
-compatibility_date = "2025-01-31"
+compatibility_date = "2023-10-31"
 
-[[r2_buckets]]
-binding = "BLOG_B"
-bucket_name = "blog-b"
+pages_build_output_dir = "public"

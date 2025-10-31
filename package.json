@@ -1,26 +1,16 @@
 {
-  "name": "b",
+  "name": "wordpress-hugo-migration",
   "version": "1.0.0",
-  "description": "Static blog powered by Hugo + Cloudflare Workers + R2",
-  "main": "worker.js",
+  "description": "Migration of WordPress content to Hugo with Cloudflare deployment",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "wrangler pages deploy public --project-name=b",
+    "build": "hugo --minify"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/7893/b.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/7893/b/issues"
-  },
-  "homepage": "https://github.com/7893/b#readme",
   "devDependencies": {
-    "jsdom": "^27.1.0",
-    "pagefind": "^1.4.0",
-    "xml2js": "^0.6.2"
+    "@cloudflare/wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "wrangler": "^3.0.0"
   }
 }
