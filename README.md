@@ -26,6 +26,13 @@ Static blog powered by Hugo + Cloudflare Workers + R2
 - ✅ robots.txt
 - ✅ Automatic deployment via GitHub Actions
 - ✅ Categories and tags taxonomy
+- ✅ Full-text search (Pagefind)
+- ✅ Comments system (Giscus)
+- ✅ CDN caching (Cloudflare Workers)
+- ✅ Optimized cache headers
+  - Static assets: 1 year cache
+  - HTML: 1 hour cache
+- ✅ Security headers
 
 ## Local Development
 
