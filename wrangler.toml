@@ -5,8 +5,3 @@ compatibility_date = "2025-01-31"
 [[r2_buckets]]
 binding = "BLOG_B"
 bucket_name = "blog-b"
-
-[env.production]
-routes = [
-  { pattern = "b.53.workers.dev/*", zone_name = "53.workers.dev" }
-]
